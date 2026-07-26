@@ -1,0 +1,88 @@
+name: Fetch D4 Game Data
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Keeps Nephalem's Codex aspects database current with d4guides.gg.
+# Runs weekly and writes data/aspects-db.js directly to the repo.
+# GitHub Pages then serves the updated file on the live site within ~60 seconds.
+#
+# Triggers:
+#   - Every Monday at 6 AM UTC (automatic)
+#   - Manually via: Actions tab → "Fetch D4 Game Data" → Run workflow
+#   - On push to scripts/fetch-data.py (for testing scraper changes)
+# ──────────────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Every Monday 6:00 AM UTC
+
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: "Force commit even if data is unchanged"
+        required: false
+        default: "false"
+        type: boolean
+
+  push:
+    paths:
+      - "scripts/fetch-data.py"
+
+jobs:
+  fetch-and-commit:
+    name: Scrape D4 Data & Update DB
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch D4 game data
+        run: python scripts/fetch-data.py
+
+      - name: Check for file changes
+        id: changes
+        run: |
+          git diff --quiet data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit updated database
+        if: steps.changes.outputs.changed == 'true' || github.event.inputs.force_update == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/aspects-db.js data/aspects-raw.json
+          ASPECT_COUNT=$(grep -c '"id":' data/aspects-db.js 2>/dev/null || echo "?")
+          DATE=$(date -u '+%Y-%m-%d')
+          git commit -m "🗡️ Auto-update D4 aspects [${DATE}] — ${ASPECT_COUNT} entries [skip ci]"
+          git push
+
+      - name: No changes detected
+        if: steps.changes.outputs.changed == 'false' && github.event.inputs.force_update != 'true'
+        run: echo "✅ Data is already up to date — no commit needed."
+
+      - name: Job summary
+        if: always()
+        run: |
+          echo "## 📜 Nephalem's Codex — Data Fetch" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/aspects-db.js ]; then
+            COUNT=$(grep -c '"id":' data/aspects-db.js 2>/dev/null || echo "?")
+            echo "- ✅ **Aspects written:** ${COUNT}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- ❌ **aspects-db.js not found** — scrape may have failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "- 📅 **Date:** $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 **Source:** d4guides.gg/en/database/aspects" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌐 **Live site:** https://alltrueist.github.io/nephalimscodex" >> $GITHUB_STEP_SUMMARY
