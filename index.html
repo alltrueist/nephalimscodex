@@ -56,8 +56,7 @@
       <!-- Gear Slots -->
       <div class="gear-section">
         <div class="section-title">🛡️ Gear Slots
-          <span style="font-weight:400;color:var(--text-dim);font-family:'Inter',sans-serif;
-                text-transform:none;letter-spacing:0;font-size:10px;">— click to add/edit</span>
+          <span style="font-weight:400;color:var(--text-dim);font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:10px;">— click to add/edit</span>
         </div>
         <div class="gear-grid" id="gear-grid"></div>
       </div>
@@ -80,16 +79,16 @@
             </div>
           </div>
 
-          <!-- Item Name -->
+          <!-- Item Name + Quick Pick -->
           <div class="field-group">
             <label class="field-label" for="edit-item-name">Item Name</label>
             <input type="text" id="edit-item-name" list="item-names-list"
-              placeholder="Type name or pick from Quick Pick below" autocomplete="off" />
+              placeholder="Type name or use Quick Pick below" autocomplete="off" />
             <datalist id="item-names-list"></datalist>
             <div class="db-match-banner" id="db-match-banner"></div>
           </div>
 
-          <!-- Quick Pick -->
+          <!-- Quick Pick Browser -->
           <div class="field-group" id="quick-pick-group">
             <div class="field-label" style="display:flex;align-items:center;gap:6px;">
               Quick Pick
@@ -98,14 +97,14 @@
             <div id="quick-pick-list" class="quick-pick-list"></div>
           </div>
 
-          <!-- Legendary-specific fields -->
+          <!-- Legendary Fields (hidden for Unique/Mythic) -->
           <div id="legendary-fields">
             <div class="field-group">
               <label class="field-label" for="edit-aspect">Legendary Aspect</label>
               <input type="text" id="edit-aspect" list="aspect-names-list"
-                placeholder="e.g. Aspect of the Protector" autocomplete="off"/>
+                placeholder="e.g. Aspect of the Protector" autocomplete="off" />
               <datalist id="aspect-names-list"></datalist>
-              <div class="field-hint">Enter exactly as in your build guide. Aspect info auto-fills.</div>
+              <div class="field-hint">Enter exactly as in your build guide.</div>
             </div>
             <div class="field-group">
               <label class="field-label" for="edit-affixes">Required Affixes</label>
@@ -117,7 +116,7 @@
               <label class="field-label" for="edit-tempers">Tempers</label>
               <input type="text" id="edit-tempers"
                 placeholder="e.g. Weapon Mastery, Core Skill Damage" />
-              <div class="field-hint">Comma-separated. List both temper slots.</div>
+              <div class="field-hint">Comma-separated. List both temper slots from your guide.</div>
             </div>
             <div class="field-group">
               <label class="field-label" for="edit-mw-priority">Masterwork Priority</label>
@@ -127,23 +126,23 @@
             </div>
           </div>
 
-          <!-- Notes -->
+          <!-- Notes (all types) -->
           <div class="field-group">
             <label class="field-label" for="edit-notes">Notes</label>
             <textarea id="edit-notes" rows="2"
               placeholder="Any extra notes about this item..."></textarea>
           </div>
 
-        </div>
+        </div><!-- /edit-panel-body -->
         <div class="edit-panel-actions">
           <button class="btn btn-primary" id="btn-save-item">Save Item</button>
           <button class="btn btn-danger btn-sm" id="btn-delete-item">Remove</button>
         </div>
-      </div>
+      </div><!-- /edit-panel -->
 
     </div><!-- /left-panel -->
 
-    <!-- ── RIGHT PANEL ── -->
+    <!-- ── RIGHT PANEL — ACQUISITION GUIDE ── -->
     <div class="right-panel">
       <div class="guide-header">
         <div>
@@ -161,7 +160,7 @@
   </div><!-- /main-container -->
 </div><!-- /app -->
 
-<!-- ── FIRST-VISIT OVERLAY ── -->
+<!-- ── FIRST-VISIT HOW-TO OVERLAY ── -->
 <div id="howto-overlay" style="
   display:none;position:fixed;inset:0;
   background:rgba(0,0,0,0.88);z-index:9998;
@@ -171,12 +170,12 @@
     <h2 style="font-family:'Cinzel',serif;color:#f0be60;margin-bottom:16px;">📜 How to Use Nephalem's Codex</h2>
     <ol style="font-size:13px;line-height:2.2;color:#e8e4d0;padding-left:20px;">
       <li>Open a build guide on <strong style="color:#c8932a">Maxroll, Mobalytics, or D4Builds</strong></li>
-      <li>Set your <strong style="color:#c8932a">Build Name</strong> and <strong style="color:#c8932a">Class</strong> — this filters the item list to your class only</li>
+      <li>Set your <strong style="color:#c8932a">Build Name</strong> and <strong style="color:#c8932a">Class</strong> — filters all items and aspects to your class</li>
       <li>Click any <strong style="color:#c8932a">Gear Slot</strong> to open the editor:<br>
         <span style="color:#8a8478;font-size:11px;">
-          — Use <strong>Quick Pick</strong> to browse available items for that slot (filtered by class)<br>
-          — <strong>Uniques/Mythics</strong>: pick an item name — boss source auto-fills in the guide<br>
-          — <strong>Legendaries</strong>: fill in aspect + affixes + tempers + MW priority
+          — Use <strong>Quick Pick</strong> to browse items for that slot (filtered to your class)<br>
+          — <strong>Uniques / Mythics:</strong> just pick a name — boss source auto-fills in the guide<br>
+          — <strong>Legendaries:</strong> fill in aspect + affixes + tempers + MW priority
         </span>
       </li>
       <li>Your <strong style="color:#c8932a">Acquisition Guide</strong> builds live on the right</li>
@@ -184,7 +183,7 @@
     </ol>
     <div style="margin-top:14px;padding:10px;background:rgba(200,147,42,0.1);border-radius:6px;font-size:11px;color:#8a8478;">
       💾 Auto-saves in your browser between sessions.<br>
-      🗃️ Database: ~305 unique items across 12 bosses (Season 14, from Owen's loot table).<br>
+      🔄 Aspects DB auto-updates weekly via GitHub Actions.<br>
       🔗 Live: <a href="https://alltrueist.github.io/nephalimscodex/" style="color:#c8932a;">alltrueist.github.io/nephalimscodex</a>
     </div>
     <button onclick="closeHowTo()" style="
@@ -208,7 +207,9 @@
   }
 </script>
 
+<!-- Load order matters: items-db first, then aspects-db (extends D4DB), then app -->
 <script src="data/items-db.js"></script>
+<script src="data/aspects-db.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
