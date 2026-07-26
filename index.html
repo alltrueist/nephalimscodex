@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nephalem's Codex — D4 Build Gear Planner</title>
+  <meta name="description" content="Diablo 4 build gear acquisition planner — boss farm targets, Horadric Cube crafting, aspects, and legendary build steps in one place." />
+
+  <!-- Canonical GitHub Pages URL -->
+  <link rel="canonical" href="https://alltrueist.github.io/nephalimscodex/" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +19,7 @@
 <body>
 <div id="app">
 
-  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <!-- ── HEADER ── -->
   <header>
     <div class="header-brand">
       <div class="header-logo">📜</div>
@@ -27,13 +31,16 @@
     <div class="header-meta">
       <div><span class="season-tag">Season 14</span> Death Awakening</div>
       <div>Lord of Hatred Expansion</div>
+      <div class="header-live-link">
+        🔗 <a href="https://alltrueist.github.io/nephalimscodex/" target="_blank" rel="noopener">alltrueist.github.io/nephalimscodex</a>
+      </div>
     </div>
   </header>
 
-  <!-- ── MAIN LAYOUT ────────────────────────────────────── -->
+  <!-- ── MAIN LAYOUT ── -->
   <div class="main-container">
 
-    <!-- ── LEFT PANEL ─────────────────────────────────── -->
+    <!-- ── LEFT PANEL ── -->
     <div class="left-panel">
 
       <!-- Build Setup -->
@@ -53,13 +60,15 @@
 
       <!-- Gear Slots -->
       <div class="gear-section">
-        <div class="section-title">🛡️ Gear Slots <span style="font-weight:400;color:var(--text-dim);font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;">(click a slot to add/edit)</span></div>
-        <div class="gear-grid" id="gear-grid">
-          <!-- Slots rendered by app.js -->
+        <div class="section-title">🛡️ Gear Slots
+          <span style="font-weight:400;color:var(--text-dim);font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:10px;">
+            — click a slot to add/edit
+          </span>
         </div>
+        <div class="gear-grid" id="gear-grid"></div>
       </div>
 
-      <!-- Item Edit Panel (slides in at bottom of left column) -->
+      <!-- Item Edit Panel -->
       <div class="edit-panel" id="edit-panel">
         <div class="edit-panel-header">
           <h3 id="edit-slot-label">Edit Slot</h3>
@@ -67,7 +76,7 @@
         </div>
         <div class="edit-panel-body">
 
-          <!-- Item Type Selector -->
+          <!-- Item Type -->
           <div class="field-group">
             <div class="field-label">Item Type</div>
             <div class="type-tabs">
@@ -80,134 +89,112 @@
           <!-- Item Name -->
           <div class="field-group">
             <label class="field-label" for="edit-item-name">Item Name</label>
-            <input type="text" id="edit-item-name" list="item-names-list" placeholder="e.g. Tibault's Will or Helm piece" />
+            <input type="text" id="edit-item-name" list="item-names-list"
+              placeholder="e.g. Tibault's Will or Helm piece" />
             <datalist id="item-names-list"></datalist>
             <div class="db-match-banner" id="db-match-banner"></div>
           </div>
 
-          <!-- Legendary-specific fields -->
+          <!-- Legendary Fields -->
           <div id="legendary-fields">
-
             <div class="field-group">
               <label class="field-label" for="edit-aspect">Legendary Aspect</label>
-              <input type="text" id="edit-aspect" list="item-names-list" placeholder="e.g. Aspect of the Protector" />
-              <div class="field-hint">Enter the aspect name exactly as it appears in your build guide.</div>
+              <input type="text" id="edit-aspect" list="item-names-list"
+                placeholder="e.g. Aspect of the Protector" />
+              <div class="field-hint">Enter the aspect name exactly as in your build guide.</div>
             </div>
-
             <div class="field-group">
               <label class="field-label" for="edit-affixes">Required Affixes</label>
-              <input type="text" id="edit-affixes" placeholder="e.g. Critical Strike Damage, Attack Speed, Life" />
+              <input type="text" id="edit-affixes"
+                placeholder="e.g. Critical Strike Damage, Attack Speed, Life" />
               <div class="field-hint">Comma-separated. Copy from your build guide's gear section.</div>
             </div>
-
             <div class="field-group">
               <label class="field-label" for="edit-tempers">Tempers</label>
-              <input type="text" id="edit-tempers" placeholder="e.g. Weapon Mastery → Stab, Core Skill → Damage" />
+              <input type="text" id="edit-tempers"
+                placeholder="e.g. Weapon Mastery, Core Skill Damage" />
               <div class="field-hint">Comma-separated. List both temper slots.</div>
             </div>
-
             <div class="field-group">
               <label class="field-label" for="edit-mw-priority">Masterwork Priority</label>
-              <input type="text" id="edit-mw-priority" placeholder="e.g. Critical Strike Damage > Attack Speed" />
-              <div class="field-hint">Which stat to target when MW procs. Usually the highest multiplier.</div>
+              <input type="text" id="edit-mw-priority"
+                placeholder="e.g. Critical Strike Damage > Attack Speed" />
+              <div class="field-hint">Which stat to target when MW procs at rank 4/8/12.</div>
             </div>
-
-          </div><!-- /legendary-fields -->
-
-          <!-- Notes (all types) -->
-          <div class="field-group">
-            <label class="field-label" for="edit-notes">Notes</label>
-            <textarea id="edit-notes" rows="2" placeholder="Any extra notes about this item..."></textarea>
           </div>
 
-        </div><!-- /edit-panel-body -->
+          <!-- Notes -->
+          <div class="field-group">
+            <label class="field-label" for="edit-notes">Notes</label>
+            <textarea id="edit-notes" rows="2"
+              placeholder="Any extra notes about this item..."></textarea>
+          </div>
+
+        </div>
         <div class="edit-panel-actions">
           <button class="btn btn-primary" id="btn-save-item">Save Item</button>
           <button class="btn btn-danger btn-sm" id="btn-delete-item">Remove</button>
         </div>
-      </div><!-- /edit-panel -->
+      </div>
 
     </div><!-- /left-panel -->
 
-    <!-- ── RIGHT PANEL — ACQUISITION GUIDE ─────────────── -->
+    <!-- ── RIGHT PANEL ── -->
     <div class="right-panel">
       <div class="guide-header">
         <div>
-          <div class="guide-title">
-            📋 Acquisition Guide
-          </div>
+          <div class="guide-title">📋 Acquisition Guide</div>
           <div class="build-name-display" id="build-name-display">No build loaded</div>
         </div>
         <div class="guide-actions">
-          <button class="btn btn-secondary btn-sm" id="btn-copy-guide" title="Copy guide to clipboard">📋 Copy</button>
-          <button class="btn btn-danger btn-sm" id="btn-clear-build" title="Clear all gear">🗑️ Clear</button>
+          <button class="btn btn-secondary btn-sm" id="btn-copy-guide">📋 Copy</button>
+          <button class="btn btn-danger btn-sm"    id="btn-clear-build">🗑️ Clear</button>
         </div>
       </div>
-
-      <!-- Guide output — rendered by app.js -->
-      <div id="guide-output">
-        <!-- Empty state or sections will be injected here -->
-      </div>
-
-    </div><!-- /right-panel -->
+      <div id="guide-output"></div>
+    </div>
 
   </div><!-- /main-container -->
-
 </div><!-- /app -->
 
-<!-- ── HOW TO USE — floating instruction (dismissed on load) ── -->
+<!-- ── FIRST-VISIT HOW-TO OVERLAY ── -->
 <div id="howto-overlay" style="
-  display:none;
-  position:fixed;inset:0;
-  background:rgba(0,0,0,0.85);
-  z-index:9998;
-  align-items:center;
-  justify-content:center;
-">
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.88);z-index:9998;
+  align-items:center;justify-content:center;">
   <div style="
-    background:var(--bg-card);
-    border:1px solid var(--gold-dim);
-    border-radius:12px;
-    max-width:560px;
-    width:90%;
-    padding:32px;
-    box-shadow:0 8px 60px rgba(0,0,0,0.8);
-  ">
-    <h2 style="font-family:'Cinzel',serif;color:var(--gold-light);margin-bottom:16px;">📜 How to Use Nephalem's Codex</h2>
-    <ol style="font-size:13px;line-height:2.0;color:var(--text);padding-left:20px;">
-      <li>Open a build guide on <strong style="color:var(--gold)">Maxroll, Mobalytics, or D4Builds</strong></li>
-      <li>Enter your <strong style="color:var(--gold)">Build Name</strong> and <strong style="color:var(--gold)">Class</strong> above</li>
-      <li>Click each <strong style="color:var(--gold)">Gear Slot</strong> on the left and fill in what the guide shows:<br>
-        <span style="color:var(--text-muted);font-size:11px;">
-          — For <strong>Uniques</strong>: just the item name (auto-looks up boss source)<br>
-          — For <strong>Legendaries</strong>: aspect + affixes + tempers + masterwork priority
+    background:#151528;border:1px solid #6b4e15;border-radius:12px;
+    max-width:560px;width:90%;padding:32px;
+    box-shadow:0 8px 60px rgba(0,0,0,0.8);">
+    <h2 style="font-family:'Cinzel',serif;color:#f0be60;margin-bottom:16px;">📜 How to Use Nephalem's Codex</h2>
+    <ol style="font-size:13px;line-height:2.2;color:#e8e4d0;padding-left:20px;">
+      <li>Open a build guide on <strong style="color:#c8932a">Maxroll, Mobalytics, or D4Builds</strong></li>
+      <li>Enter your <strong style="color:#c8932a">Build Name</strong> and <strong style="color:#c8932a">Class</strong></li>
+      <li>Click each <strong style="color:#c8932a">Gear Slot</strong> and fill in from your guide:<br>
+        <span style="color:#8a8478;font-size:11px;">
+          — <strong>Uniques/Mythics:</strong> just enter the item name (boss source auto-fills)<br>
+          — <strong>Legendaries:</strong> enter aspect + affixes + tempers + MW priority
         </span>
       </li>
-      <li>Your <strong style="color:var(--gold)">Acquisition Guide</strong> updates live on the right</li>
-      <li>Use the <strong style="color:var(--gold)">📋 Copy</strong> button to export a text checklist</li>
+      <li>Your <strong style="color:#c8932a">Acquisition Guide</strong> updates live on the right</li>
+      <li>Use <strong style="color:#c8932a">📋 Copy</strong> to export a plain-text checklist</li>
     </ol>
-    <div style="margin-top:16px;padding:10px;background:rgba(200,147,42,0.1);border-radius:6px;font-size:11px;color:var(--text-muted);">
-      💾 Your build auto-saves in your browser. It will still be here next time you visit.
+    <div style="margin-top:16px;padding:10px;background:rgba(200,147,42,0.1);border-radius:6px;font-size:11px;color:#8a8478;">
+      💾 Your build auto-saves in your browser. It will still be here next time you visit.<br>
+      🔗 Live site: <a href="https://alltrueist.github.io/nephalimscodex/" style="color:#c8932a;">alltrueist.github.io/nephalimscodex</a>
     </div>
     <button onclick="closeHowTo()" style="
-      margin-top:20px;
-      width:100%;
-      padding:12px;
-      background:linear-gradient(135deg,var(--gold-dim),var(--gold));
-      border:none;
-      border-radius:6px;
-      color:var(--bg-deep);
-      font-family:'Cinzel',serif;
-      font-size:13px;
-      font-weight:700;
-      cursor:pointer;
-      letter-spacing:0.05em;
-    ">Begin Your Journey →</button>
+      margin-top:20px;width:100%;padding:12px;
+      background:linear-gradient(135deg,#6b4e15,#c8932a);
+      border:none;border-radius:6px;color:#07070f;
+      font-family:'Cinzel',serif;font-size:13px;font-weight:700;
+      cursor:pointer;letter-spacing:0.05em;">
+      Begin Your Journey →
+    </button>
   </div>
 </div>
 
 <script>
-  // Show how-to on first visit
   if (!localStorage.getItem('d4_howto_seen')) {
     document.getElementById('howto-overlay').style.display = 'flex';
   }
@@ -217,9 +204,7 @@
   }
 </script>
 
-<!-- Load database first, then app logic -->
 <script src="data/items-db.js"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
