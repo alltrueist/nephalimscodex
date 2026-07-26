@@ -5,9 +5,9 @@
 // ============================================================
 
 const STATE = {
-  buildName: '',
+  buildName:  '',
   buildClass: '',
-  gear: {},
+  gear:       {},
   activeSlot: null
 };
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadFromStorage();
   renderClassOptions();
   renderGearSlots();
-  buildAutocomplete();
+  buildAspectAutocomplete();
   renderGuide();
   attachSetupListeners();
 });
@@ -31,27 +31,51 @@ function saveToStorage() {
 
 function loadFromStorage() {
   const saved = localStorage.getItem('d4_build');
-  if (saved) {
-    const parsed = JSON.parse(saved);
-    STATE.buildName  = parsed.buildName  || '';
-    STATE.buildClass = parsed.buildClass || '';
-    STATE.gear       = parsed.gear       || {};
-    document.getElementById('build-name').value  = STATE.buildName;
-    document.getElementById('build-class').value = STATE.buildClass;
-  }
+  if (!saved) return;
+  const p = JSON.parse(saved);
+  STATE.buildName  = p.buildName  || '';
+  STATE.buildClass = p.buildClass || '';
+  STATE.gear       = p.gear       || {};
+  document.getElementById('build-name').value  = STATE.buildName;
+  document.getElementById('build-class').value = STATE.buildClass;
+}
+
+// ── SLOT UTILITY ──────────────────────────────────────────────
+// Map an app slot ID (ring1, weapon2, etc.) to the DB slot category
+function getSlotCategory(slotId) {
+  return D4DB.slotCategoryMap[slotId] || slotId;
+}
+
+// Returns uniques filtered by slot type AND class
+function getFilteredUniques(slotId) {
+  const slotCat = getSlotCategory(slotId);
+  const cls     = STATE.buildClass;
+  return D4DB.uniques.filter(item => {
+    const slotOk  = item.slot === slotCat;
+    const classOk = item.class === 'all' || !cls || item.class === cls;
+    return slotOk && classOk;
+  });
+}
+
+// Returns aspects filtered by class
+function getFilteredAspects() {
+  const cls = STATE.buildClass;
+  return D4DB.aspects.filter(a => a.class === 'all' || !cls || a.class === cls);
 }
 
 // ── SETUP LISTENERS ───────────────────────────────────────────
 function attachSetupListeners() {
   document.getElementById('build-name').addEventListener('input', e => {
     STATE.buildName = e.target.value;
-    saveToStorage();
-    renderGuide();
+    saveToStorage(); renderGuide();
   });
   document.getElementById('build-class').addEventListener('change', e => {
     STATE.buildClass = e.target.value;
-    saveToStorage();
-    renderGuide();
+    saveToStorage(); renderGearSlots(); renderGuide();
+    if (STATE.activeSlot) {
+      updateItemAutocomplete(STATE.activeSlot);
+      renderQuickPick(STATE.activeSlot);
+    }
   });
   document.getElementById('btn-clear-build').addEventListener('click',  clearBuild);
   document.getElementById('btn-copy-guide').addEventListener('click',   copyGuideToClipboard);
@@ -94,10 +118,16 @@ function renderGearSlots() {
       if (item.type === 'mythic')    { badgeClass = 'badge-mythic';    badgeText = 'Mythic'; }
     }
 
+    // Count available items for this slot+class (shown as a hint)
+    const available = getFilteredUniques(slot.id).length;
+    const availHint = STATE.buildClass
+      ? `<span class="slot-available-hint">${available} items</span>`
+      : '';
+
     card.innerHTML = `
       <div class="slot-icon">${slot.icon}</div>
       <div class="slot-info">
-        <div class="slot-label">${slot.label}</div>
+        <div class="slot-label">${slot.label} ${availHint}</div>
         <div class="slot-item-name ${item ? '' : 'empty'}">
           ${item ? (item.name || '(Unnamed item)') : 'Click to add item'}
         </div>
@@ -107,6 +137,98 @@ function renderGearSlots() {
     `;
     grid.appendChild(card);
   });
+}
+
+// ── AUTOCOMPLETE ──────────────────────────────────────────────
+// Item name datalist — filtered by slot + class
+function updateItemAutocomplete(slotId) {
+  const list = document.getElementById('item-names-list');
+  list.innerHTML = '';
+  const items = getFilteredUniques(slotId);
+  items.forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item.name;
+    opt.dataset.type = item.itemType;
+    list.appendChild(opt);
+  });
+}
+
+// Aspect name datalist — filtered by class, always available
+function buildAspectAutocomplete() {
+  const list = document.getElementById('aspect-names-list');
+  list.innerHTML = '';
+  D4DB.aspects.forEach(a => {
+    const opt = document.createElement('option');
+    opt.value = a.name;
+    list.appendChild(opt);
+  });
+}
+
+// ── QUICK PICK ────────────────────────────────────────────────
+function renderQuickPick(slotId) {
+  const container = document.getElementById('quick-pick-list');
+  const countEl   = document.getElementById('qp-count');
+  const items     = getFilteredUniques(slotId);
+
+  if (items.length === 0) {
+    countEl.textContent = '(0 items)';
+    container.innerHTML = `<div style="font-size:11px;color:var(--text-dim);padding:8px 0;">
+      No items found for this slot${STATE.buildClass ? ' and class' : ''}. 
+      ${!STATE.buildClass ? 'Select a class above to filter.' : ''}
+    </div>`;
+    return;
+  }
+
+  countEl.textContent = `(${items.length} available)`;
+
+  // Group by source type for display
+  const mythics   = items.filter(i => i.itemType === 'mythic');
+  const bossItems = items.filter(i => i.itemType === 'unique' && i.sources.some(s => s.type === 'boss'));
+  const poolItems = items.filter(i => i.itemType === 'unique' && i.sources.every(s => s.type === 'pool'));
+
+  let html = '';
+
+  if (mythics.length) {
+    html += `<div class="qp-group-label">⚜️ Mythic Uniques</div>`;
+    mythics.forEach(item => { html += buildQuickPickItem(item); });
+  }
+  if (bossItems.length) {
+    html += `<div class="qp-group-label">💀 Boss Drops</div>`;
+    bossItems.forEach(item => { html += buildQuickPickItem(item); });
+  }
+  if (poolItems.length) {
+    html += `<div class="qp-group-label">🎲 General Pool</div>`;
+    poolItems.forEach(item => { html += buildQuickPickItem(item); });
+  }
+
+  container.innerHTML = html;
+}
+
+function buildQuickPickItem(item) {
+  const primarySrc = item.sources.find(s => s.type === 'boss' || s.type === 'mythic') || item.sources[0];
+  const srcLabel   = primarySrc ? primarySrc.label : '—';
+  const typeClass  = item.itemType === 'mythic' ? 'qp-badge-mythic' : 'qp-badge-unique';
+  const typeName   = item.itemType === 'mythic' ? 'Mythic' : 'Unique';
+  // Escape single quotes in name for onclick
+  const safeName   = item.name.replace(/'/g, "\\'");
+  return `
+    <div class="quick-pick-item" onclick="selectQuickPickItem('${safeName}', '${item.itemType}')">
+      <div class="qp-info">
+        <span class="qp-name">${item.name}</span>
+        <span class="qp-slot-display">${item.slotDisplay}</span>
+      </div>
+      <div class="qp-right">
+        <span class="qp-source">${srcLabel}</span>
+        <span class="qp-badge ${typeClass}">${typeName}</span>
+      </div>
+    </div>
+  `;
+}
+
+function selectQuickPickItem(name, itemType) {
+  document.getElementById('edit-item-name').value = name;
+  selectItemType(itemType || 'unique');
+  updateDbMatchBanner(name);
 }
 
 // ── EDIT PANEL ────────────────────────────────────────────────
@@ -124,7 +246,9 @@ function openEditPanel(slotId) {
   document.getElementById('edit-notes').value       = item.notes || '';
 
   selectItemType(item.type || 'legendary');
+  updateItemAutocomplete(slotId);
   updateDbMatchBanner(item.name || '');
+  renderQuickPick(slotId);
 
   document.getElementById('edit-panel').classList.add('open');
   document.getElementById('edit-item-name').focus();
@@ -141,25 +265,41 @@ function selectItemType(type) {
     if (tab.dataset.type === type) tab.classList.add(`active-${type}`);
   });
   const legFields = document.getElementById('legendary-fields');
-  if (type === 'unique' || type === 'mythic') {
-    legFields.style.opacity = '0.5';
-    legFields.style.pointerEvents = 'none';
-  } else {
-    legFields.style.opacity = '1';
-    legFields.style.pointerEvents = 'auto';
-  }
+  const disabled  = type === 'unique' || type === 'mythic';
+  legFields.style.opacity        = disabled ? '0.4' : '1';
+  legFields.style.pointerEvents  = disabled ? 'none' : 'auto';
 }
 
 function getSelectedItemType() {
-  const active = document.querySelector('.type-tab.active-legendary, .type-tab.active-unique, .type-tab.active-mythic');
-  return active ? active.dataset.type : 'legendary';
+  const active = document.querySelector('.type-tab[class*="active-"]');
+  if (!active) return 'legendary';
+  return active.dataset.type;
+}
+
+function onItemNameInput(e) {
+  updateDbMatchBanner(e.target.value.trim());
+}
+
+function updateDbMatchBanner(name) {
+  const banner = document.getElementById('db-match-banner');
+  if (!name) { banner.classList.remove('visible'); return; }
+  const match = lookupUniqueByName(name);
+  if (match) {
+    const boss = match.sources.find(s => s.type === 'boss' || s.type === 'mythic');
+    const src  = boss ? boss.label : 'General Pool / Cube';
+    banner.textContent = `✨ Found in database! Source: ${src}. Guide will auto-populate.`;
+    banner.classList.add('visible');
+    selectItemType(match.itemType || 'unique');
+  } else {
+    banner.textContent = `📝 Not in database — enter details manually. (You can still save it!)`;
+    banner.classList.add('visible');
+  }
 }
 
 function saveItem() {
   const slotId = STATE.activeSlot;
   if (!slotId) return;
-
-  const name       = document.getElementById('edit-item-name').value.trim();
+  const name = document.getElementById('edit-item-name').value.trim();
   if (!name) { showToast('Please enter an item name.'); return; }
 
   const type       = getSelectedItemType();
@@ -174,7 +314,6 @@ function saveItem() {
   const dbEntry = lookupUniqueByName(name);
 
   STATE.gear[slotId] = { name, type, aspect, affixes, tempers, mwPriority, notes, slotId, dbEntry: dbEntry || null };
-
   saveToStorage();
   renderGearSlots();
   renderGuide();
@@ -194,37 +333,7 @@ function deleteItem() {
   showToast(`🗑️ ${name} removed.`);
 }
 
-// ── AUTOCOMPLETE ──────────────────────────────────────────────
-function buildAutocomplete() {
-  const list = document.getElementById('item-names-list');
-  const names = new Set();
-  D4DB.uniques.forEach(u => names.add(u.name));
-  D4DB.aspects.forEach(a => names.add(a.name));
-  names.forEach(name => {
-    const opt = document.createElement('option');
-    opt.value = name;
-    list.appendChild(opt);
-  });
-}
-
-function onItemNameInput(e) {
-  updateDbMatchBanner(e.target.value.trim());
-}
-
-function updateDbMatchBanner(name) {
-  const banner = document.getElementById('db-match-banner');
-  if (!name) { banner.classList.remove('visible'); return; }
-  const match = lookupUniqueByName(name);
-  if (match) {
-    banner.textContent = `✨ Found in database! Acquisition info will auto-populate in the guide.`;
-    banner.classList.add('visible');
-    selectItemType(match.id.includes('mythic') ? 'mythic' : (match.sources.some(s => s.type !== 'cube' && s.type !== 'pool') ? 'unique' : 'unique'));
-  } else {
-    banner.textContent = `📝 Not in database — enter details manually below.`;
-    banner.classList.add('visible');
-  }
-}
-
+// ── DB LOOKUPS ────────────────────────────────────────────────
 function lookupUniqueByName(name) {
   if (!name) return null;
   const lower = name.toLowerCase();
@@ -253,11 +362,13 @@ function renderGuide() {
   const filledItems = Object.values(STATE.gear).filter(Boolean);
   if (filledItems.length === 0) { container.innerHTML = getEmptyStateHTML(); return; }
 
-  const bossDrops = {};
-  const poolDrops = [];
-  const cubeItems = [];
-  const aspects   = [];
-  const legendaryBuilds = [];
+  // ── Categorize items ──
+  const bossDrops     = {}; // bossId → [drop info]
+  const poolDrops     = []; // general pool items
+  const mythicDrops   = []; // mythic uniques
+  const cubeItems     = []; // 3-to-1 transmute targets
+  const aspects       = []; // legendary aspects
+  const legendaryBuilds = []; // legendary items with affix details
 
   filledItems.forEach(item => {
     const slotDef   = D4DB.gearSlots.find(s => s.id === item.slotId);
@@ -271,20 +382,28 @@ function renderGuide() {
             if (!bossDrops[src.boss]) bossDrops[src.boss] = [];
             bossDrops[src.boss].push({ slotLabel, itemName: item.name, note: src.detail });
           } else if (src.type === 'pool') {
-            poolDrops.push({ slotLabel, itemName: item.name, notes: db.notes });
-          } else if (src.type === 'cube') {
-            cubeItems.push({ slotLabel, itemName: item.name, recipe: src.detail, cubeNote: db.notes, isCubeTransmute: true });
+            // Only add to poolDrops once per item (avoid duplicate if also boss source)
+            if (!poolDrops.find(p => p.itemName === item.name)) {
+              poolDrops.push({ slotLabel, itemName: item.name, notes: db.notes });
+            }
+          } else if (src.type === 'mythic') {
+            if (!mythicDrops.find(m => m.itemName === item.name)) {
+              mythicDrops.push({ slotLabel, itemName: item.name });
+            }
+          }
+          if (src.type === 'pool' && db.sources.some(s => s.type === 'cube')) {
+            cubeItems.push({ slotLabel, itemName: item.name, recipe: src.detail || '', cubeNote: db.notes, isCubeTransmute: true });
           }
         });
       } else {
-        poolDrops.push({ slotLabel, itemName: item.name, notes: 'Not in database — verify boss source on Maxroll.gg' });
+        // Unknown unique — show as pool with warning
+        poolDrops.push({ slotLabel, itemName: item.name, notes: '⚠️ Not in database — verify source on Maxroll.gg' });
       }
     }
 
     if (item.type === 'legendary') {
       if (item.aspect) {
-        const dbAspect = lookupAspectByName(item.aspect);
-        aspects.push({ aspectName: item.aspect, slotLabel, dbAspect });
+        aspects.push({ aspectName: item.aspect, slotLabel, dbAspect: lookupAspectByName(item.aspect) });
       }
       if (item.affixes && item.affixes.length > 0) {
         legendaryBuilds.push({ item, slotLabel });
@@ -293,10 +412,11 @@ function renderGuide() {
   });
 
   let html = '<div class="guide-sections">';
-  if (Object.keys(bossDrops).length > 0 || poolDrops.length > 0) html += renderBossSection(bossDrops, poolDrops);
-  if (cubeItems.length > 0 || legendaryBuilds.length > 0)        html += renderCubeSection(cubeItems, legendaryBuilds);
-  if (aspects.length > 0)                                         html += renderAspectsSection(aspects);
-  if (legendaryBuilds.length > 0)                                 html += renderLegendaryBuildSection(legendaryBuilds);
+  if (mythicDrops.length > 0)                                        html += renderMythicSection(mythicDrops);
+  if (Object.keys(bossDrops).length > 0 || poolDrops.length > 0)   html += renderBossSection(bossDrops, poolDrops);
+  if (cubeItems.length > 0 || legendaryBuilds.length > 0)           html += renderCubeSection(cubeItems, legendaryBuilds);
+  if (aspects.length > 0)                                            html += renderAspectsSection(aspects);
+  if (legendaryBuilds.length > 0)                                    html += renderLegendaryBuildSection(legendaryBuilds);
   html += renderCubeReference();
   html += '</div>';
   container.innerHTML = html;
@@ -307,16 +427,47 @@ function getEmptyStateHTML() {
     <div class="guide-empty">
       <div class="guide-empty-icon">📜</div>
       <h2>Your Acquisition Guide Awaits</h2>
-      <p>Add gear items to your build using the slots on the left. The guide will automatically fill in
-      <strong>boss farm targets, Horadric Cube recipes, aspect sources,</strong> and a
-      <strong>step-by-step crafting plan</strong> for each piece.</p>
+      <p>Click any gear slot on the left to add items. The guide automatically shows
+      <strong>boss farm targets, Cube recipes, aspects, and step-by-step crafting plans.</strong></p>
       <br>
-      <p style="color:var(--text-dim);font-size:11px;">💡 Unique items auto-fill from the database.
-      For Legendaries, enter the aspect, affixes, tempers, and masterwork priority from your build guide.</p>
+      <p style="color:var(--text-dim);font-size:11px;">
+        💡 Select a <strong>Class</strong> first — the Quick Pick browser will filter items to only what your class can use.
+      </p>
     </div>
   `;
 }
 
+// ── Mythic Section ──
+function renderMythicSection(mythicDrops) {
+  let html = `
+    <div class="guide-section" style="border-color:rgba(155,89,182,0.4);">
+      <div class="guide-section-header" style="background:linear-gradient(135deg,rgba(90,45,130,0.15),transparent);">
+        <div class="guide-section-icon">⚜️</div>
+        <div class="guide-section-title" style="color:var(--purple-bright);">Mythic Unique Targets</div>
+        <div class="guide-section-count" style="background:rgba(90,45,130,0.3);color:var(--purple-bright);">${mythicDrops.length}</div>
+      </div>
+      <div class="guide-section-body">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;padding:8px 10px;background:rgba(90,45,130,0.1);border-radius:4px;border-left:2px solid var(--purple-bright);">
+          ⚜️ <strong style="color:var(--purple-bright)">Mythic Uniques</strong> can drop from <strong>any Tormented Boss</strong>.
+          <strong style="color:var(--orange-bright)">Belial (Exalted Boss)</strong> has the highest drop chance — always run him as your primary target.
+          Key material: <strong>Betrayer's Husk ×2</strong> (drops from Greater Lair Bosses).
+        </div>
+        ${mythicDrops.map(d => `
+          <div class="drop-item" style="padding:8px 0;">
+            <span class="drop-slot-tag">${d.slotLabel}</span>
+            <span class="drop-item-name" style="color:var(--purple-bright);">⚜️ ${d.itemName}</span>
+          </div>
+        `).join('')}
+        <div style="font-size:10px;color:var(--text-dim);margin-top:8px;">
+          💡 Farm chain: Run Initiate Lair Bosses → collect Greater Boss keys → run Greater Bosses → collect Betrayer's Husks → run Belial.
+        </div>
+      </div>
+    </div>
+  `;
+  return html;
+}
+
+// ── Boss Farm Section ──
 function renderBossSection(bossDrops, poolDrops) {
   const total = Object.keys(bossDrops).length + (poolDrops.length > 0 ? 1 : 0);
   let html = `
@@ -328,17 +479,20 @@ function renderBossSection(bossDrops, poolDrops) {
       </div>
       <div class="guide-section-body">
   `;
+
   Object.entries(bossDrops).forEach(([bossId, drops]) => {
     const boss = lookupBossById(bossId);
     if (!boss) return;
+    const tierClass = `tier-${boss.tier.toLowerCase()}`;
     html += `
       <div class="boss-card">
         <div class="boss-card-header">
           <div class="boss-name">💀 ${boss.name}</div>
-          <div class="boss-tier-badge tier-${boss.tier.toLowerCase()}">${boss.tier}</div>
+          <div class="boss-tier-badge ${tierClass}">${boss.tier}</div>
         </div>
         <div class="boss-key-info">
-          <strong>Key Material:</strong> ${boss.keyMaterial} &nbsp;|&nbsp; <strong>Source:</strong> ${boss.keySource}
+          <strong>Key Material:</strong> ${boss.keyMaterial}
+          &nbsp;|&nbsp; <strong>Source:</strong> ${boss.keySource}
         </div>
         <div>
           <div class="boss-drops-label">Targeted drops from this boss:</div>
@@ -353,6 +507,7 @@ function renderBossSection(bossDrops, poolDrops) {
       </div>
     `;
   });
+
   if (poolDrops.length > 0) {
     html += `
       <div class="boss-card">
@@ -361,11 +516,12 @@ function renderBossSection(bossDrops, poolDrops) {
           <div class="boss-tier-badge tier-initiate">Any Boss</div>
         </div>
         <div class="boss-key-info">
-          These items have <strong>no dedicated boss</strong>. Best method: <strong>Horadric Cube 3-to-1 Transmutation</strong>.
-          Any Lair Boss can also drop them at a low rate.
+          These items have <strong>no dedicated boss</strong>. 
+          Best method: <strong>Horadric Cube 3-to-1 Transmutation</strong>.
+          Any Lair Boss can drop them at low rates as a fallback.
         </div>
         <div>
-          <div class="boss-drops-label">Use Horadric Cube 3-to-1 for these items:</div>
+          <div class="boss-drops-label">Recommended: Cube 3-to-1 for these items:</div>
           ${poolDrops.map(d => `
             <div class="drop-item">
               <span class="drop-slot-tag">${d.slotLabel}</span>
@@ -377,10 +533,12 @@ function renderBossSection(bossDrops, poolDrops) {
       </div>
     `;
   }
+
   html += `</div></div>`;
   return html;
 }
 
+// ── Cube Crafting Section ──
 function renderCubeSection(cubeItems, legendaryBuilds) {
   const total = cubeItems.length + legendaryBuilds.length;
   let html = `
@@ -393,7 +551,7 @@ function renderCubeSection(cubeItems, legendaryBuilds) {
       <div class="guide-section-body">
   `;
   if (cubeItems.length > 0) {
-    html += `<div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">📦 Item Transmutation — Use 3-to-1 for items with no dedicated boss:</div>`;
+    html += `<div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">📦 Item Transmutation — 3-to-1 for items with no dedicated boss:</div>`;
     cubeItems.forEach(ci => {
       html += `
         <div class="cube-card">
@@ -403,14 +561,14 @@ function renderCubeSection(cubeItems, legendaryBuilds) {
             <span style="color:var(--text-dim)">→</span>
             <span class="cube-item-name">${ci.itemName} <span style="color:var(--text-dim)">[${ci.slotLabel}]</span></span>
           </div>
-          <div class="cube-recipe-detail">${ci.recipe}</div>
+          <div class="cube-recipe-detail">${ci.recipe || 'Combine 3× same-slot items + Primordial Dust.'}</div>
           ${ci.cubeNote ? `<div class="cube-tip">💡 ${ci.cubeNote}</div>` : ''}
         </div>
       `;
     });
   }
   if (legendaryBuilds.length > 0) {
-    html += `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;margin-bottom:4px;">⚗️ Gear Modification — Use these recipes to build your Legendary items:</div>`;
+    html += `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;margin-bottom:4px;">⚗️ Gear Modification — Build your Legendary pieces:</div>`;
     legendaryBuilds.forEach(lb => {
       const { item, slotLabel } = lb;
       html += `
@@ -423,7 +581,7 @@ function renderCubeSection(cubeItems, legendaryBuilds) {
             <strong style="color:var(--text-label)">Affixes to roll:</strong>
             ${item.affixes.map(a => `<span class="affix-tag">${a}</span>`).join(' ')}
           </div>
-          <div class="cube-tip" style="color:var(--blue-bright);">🔵 Steps: Add Affix → Focus Reroll (bad stats) → Remove Affix (if needed). Use Tuning Prisms to target correct affix category.</div>
+          <div class="cube-tip" style="color:var(--blue-bright);">🔵 Add Affix (from scratch) or Focus Reroll (replace bad stats). Use Tuning Prisms to target affix category.</div>
         </div>
       `;
     });
@@ -432,6 +590,7 @@ function renderCubeSection(cubeItems, legendaryBuilds) {
   return html;
 }
 
+// ── Aspects Section ──
 function renderAspectsSection(aspects) {
   const seen = new Set();
   const unique = aspects.filter(a => { if (seen.has(a.aspectName)) return false; seen.add(a.aspectName); return true; });
@@ -445,11 +604,11 @@ function renderAspectsSection(aspects) {
       <div class="guide-section-body">
         <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">
           ⚠️ Since <strong style="color:var(--gold-light)">Lord of Hatred</strong>, aspects are <strong>drop-driven</strong> — no dungeon guarantees them.
-          Salvage Legendary items at the Blacksmith to unlock them in your Codex of Power. Then imprint at the <strong>Occultist</strong>.
+          Salvage Legendary items at the Blacksmith to add them to your Codex of Power, then imprint at the <strong>Occultist</strong>.
         </div>
   `;
   unique.forEach(a => {
-    const db = a.dbAspect || lookupAspectByName(a.aspectName);
+    const db = a.dbAspect;
     html += `
       <div class="aspect-card">
         <div class="aspect-name">📜 ${a.aspectName}</div>
@@ -463,6 +622,7 @@ function renderAspectsSection(aspects) {
   return html;
 }
 
+// ── Legendary Build Steps Section ──
 function renderLegendaryBuildSection(legendaryBuilds) {
   let html = `
     <div class="guide-section">
@@ -506,7 +666,7 @@ function renderLegendaryBuildSection(legendaryBuilds) {
       `;
     });
     if (item.notes) {
-      html += `<div style="margin-top:8px;padding:8px 10px;background:rgba(255,255,255,0.02);border-radius:4px;font-size:11px;color:var(--text-muted);border-left:2px solid var(--border-bright);">📝 Note: ${item.notes}</div>`;
+      html += `<div style="margin-top:8px;padding:8px 10px;background:rgba(255,255,255,0.02);border-radius:4px;font-size:11px;color:var(--text-muted);border-left:2px solid var(--border-bright);">📝 ${item.notes}</div>`;
     }
     html += `</div></div>`;
   });
@@ -514,9 +674,10 @@ function renderLegendaryBuildSection(legendaryBuilds) {
   return html;
 }
 
+// ── Cube Quick Reference (always rendered) ──
 function renderCubeReference() {
   const all = [...D4DB.cubeRecipes.gearModification, ...D4DB.cubeRecipes.itemTransmutation];
-  let html = `
+  return `
     <div class="guide-section">
       <div class="guide-section-header">
         <div class="guide-section-icon">📚</div>
@@ -534,7 +695,7 @@ function renderCubeReference() {
           `).join('')}
         </div>
         <div style="margin-top:16px;">
-          <div class="section-title" style="margin-bottom:10px;">🎨 Tuning Prisms Guide</div>
+          <div class="section-title" style="margin-bottom:10px;">🎨 Tuning Prisms</div>
           <div class="reference-grid">
             ${D4DB.tuningPrisms.map(p => `
               <div class="ref-card">
@@ -548,7 +709,6 @@ function renderCubeReference() {
       </div>
     </div>
   `;
-  return html;
 }
 
 // ── ACTIONS ───────────────────────────────────────────────────
@@ -558,8 +718,7 @@ function clearBuild() {
   document.getElementById('build-name').value  = '';
   document.getElementById('build-class').value = '';
   localStorage.removeItem('d4_build');
-  renderGearSlots();
-  renderGuide();
+  renderGearSlots(); renderGuide();
   showToast('🗑️ Build cleared.');
 }
 
@@ -571,12 +730,12 @@ function copyGuideToClipboard() {
     const slot = D4DB.gearSlots.find(s => s.id === item.slotId);
     text += `[${slot ? slot.label.toUpperCase() : item.slotId.toUpperCase()}] ${item.name} (${item.type})\n`;
     const db = item.dbEntry || lookupUniqueByName(item.name);
-    if (db) { db.sources.forEach(s => { text += `  Source: ${s.label} — ${s.detail}\n`; }); }
-    if (item.aspect)        text += `  Aspect: ${item.aspect}\n`;
+    if (db) db.sources.forEach(s => { text += `  Source: ${s.label} — ${s.detail}\n`; });
+    if (item.aspect)          text += `  Aspect: ${item.aspect}\n`;
     if (item.affixes?.length) text += `  Affixes: ${item.affixes.join(', ')}\n`;
     if (item.tempers?.length) text += `  Tempers: ${item.tempers.join(', ')}\n`;
-    if (item.mwPriority)    text += `  MW Priority: ${item.mwPriority}\n`;
-    if (item.notes)         text += `  Note: ${item.notes}\n`;
+    if (item.mwPriority)      text += `  MW Priority: ${item.mwPriority}\n`;
+    if (item.notes)           text += `  Note: ${item.notes}\n`;
     text += '\n';
   });
   navigator.clipboard.writeText(text).then(() => showToast('📋 Guide copied to clipboard!'));
