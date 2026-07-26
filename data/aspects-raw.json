@@ -1,0 +1,6634 @@
+[
+  {
+    "id": "accelerating-aspect",
+    "name": "Accelerating Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Critical Strikes with Core Skills increase your Attack Speed by 50.0%[+] for 5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aggressive-aspect-war",
+    "name": "Aggressive Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While moving, gain 12.0%[x] increased damage for 2 seconds, up to 60%[x]. Hitting Close enemies r...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "archdruid-s-aspect-dru",
+    "name": "Archdruid's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain an additional passive bonus for each Druid form: Human: 55%[x] increased damage to Distant e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-redesign-of-metamorphic-stone-dru",
+    "name": "Aspect (REDESIGN) of Metamorphic Stone",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "(REDESIGN)Boulder is now also a Core Skill and costs 40 Spirit to cast dealing 160% of normal dam...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-abundant-energy-sor",
+    "name": "Aspect of Abundant Energy",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Crackling Energy has a 20% chance to chain to an additional enemy and also deals 60%[x] increased...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-alchemical-advantage-rog",
+    "name": "Aspect of Alchemical Advantage",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Dealing Non-Physical damage increases your Attack Speed and Lucky Hit Chance by 6.0%[+] for 8 sec...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-amplified-damage-nec",
+    "name": "Aspect of Amplified Damage",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 60%[x] increased damage to Cursed enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ancestral-charge-bar",
+    "name": "Aspect of Ancestral Charge",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting Charge Summons 4 Ancients to Charge with you, each dealing 40%[x] of normal damage.Your S...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ancestral-echoes-bar",
+    "name": "Aspect of Ancestral Echoes",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Leap, Upheaval, and Whirlwind have up to a 65% chance to Summon an Ancient to perform ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ancestral-force-bar",
+    "name": "Aspect of Ancestral Force",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Hammer of the Ancients quakes outward for 60%[x] increased damage. This bonus is doubled against ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ancient-flame-sor",
+    "name": "Aspect of Ancient Flame",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Pyromancy Skills with a Cooldown deal 30%[x] increased damage per second of Cooldown they in...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-anger-management-bar",
+    "name": "Aspect of Anger Management",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While above [55 - 40] Fury, you are Berserk, but 2 Fury Drains per second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-anticline-burst-dru",
+    "name": "Aspect of Anticline Burst",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "(WIP)",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-apogeic-furor",
+    "name": "Aspect of Apogeic Furor",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting an Ultimate Skill increases your Ultimate damage by 10.0%[x], up to 100%[x]. At 10 stacks...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-armageddon-sor",
+    "name": "Aspect of Armageddon",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Ultimate Skill grants you [50 - 80]% increased damage of its element type while active.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-arrogance-sor",
+    "name": "Aspect of Arrogance",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shock Skills deal 45%[x] increased damage to Close or Stunned enemies. These bonuses can stack.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-arrow-storms-rog",
+    "name": "Aspect of Arrow Storms",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every time you create an Arrow Storm, their damage is increased by 30.0%[x], up to 120.0%[x], for...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-artful-initiative-rog",
+    "name": "Aspect of Artful Initiative",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "The amount of Stun Grenades you release is increased by 50%. Stun Grenades deal 30.0%[x] increase...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ascension-pal",
+    "name": "Aspect of Ascension",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Skill that grants Arbiter form increases your damage by 7.0%[x], stacking up to 10 time...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-berserk-ripping-bar",
+    "name": "Aspect of Berserk Ripping",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Berserking, your direct damage inflicts 60% bonus Bleeding damage over 5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-binding-morass",
+    "name": "Aspect of Binding Morass",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Close enemies or those you deal indirect damage to are Slowed by 70% for 3 seconds. You deal 30% ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-bitter-infection-rog",
+    "name": "Aspect of Bitter Infection",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies infected by Shadow Imbuement take [30 - 70]% of its damage every second. Shadow Imbuement...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-bristling-vengeance-spi",
+    "name": "Aspect of Bristling Vengeance",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Payback now echoes forward and additionally deals 150% of your Thorns damage to enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-burning-rage-bar",
+    "name": "Aspect of Burning Rage",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Berserking, you deal 124 Fire damage every second to surrounding enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-bursting-bones-nec",
+    "name": "Aspect of Bursting Bones",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Skills gain 0.40%[x] increased damage for every 1 Maximum Essence you have, up to 200.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-bursting-venoms-rog",
+    "name": "Aspect of Bursting Venoms",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Poison Imbued Skills have up to a 35% chance to deploy a Poison Trap while you have Po...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-calamity-war",
+    "name": "Aspect of Calamity",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Hex increases your Critical Strike Chance against an enemy by 20.0%[+] per stack.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-celestial-strife-pal",
+    "name": "Aspect of Celestial Strife",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While in Arbiter, kills grant 1.5%[x] increased Vulnerable damage, up to a maximum of 75%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-channeling",
+    "name": "Aspect of Channeling",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While channeling a Skill, all damage is increased by 70%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-chastisement-pal",
+    "name": "Aspect of Chastisement",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Juggernaut Skills deal 75%[x] increased damage to Bosses and Crowd Controlled enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-coalesced-blood-nec",
+    "name": "Aspect of Coalesced Blood",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Skills deal 70.0%[x] increased damage while you are Healthy.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-combined-strikes-spi",
+    "name": "Aspect of Combined Strikes",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each different Basic Skill you use increases all your damage by 35%[x] for 10 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-combustion-sor",
+    "name": "Aspect of Combustion",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Pyromancy Skills deal 100.0% increased Critical Strike Damage to Burning enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-contamination-rog",
+    "name": "Aspect of Contamination",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When your Poison damage Critically Strikes, you deal 60%[x] increased Non-Physical damage for 9 s...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-corruption-rog",
+    "name": "Aspect of Corruption",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Imbuement Skill effects have 60%[x] increased potency.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-decay-nec",
+    "name": "Aspect of Decay",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 85%[x] increased Corrupting and Frostbite damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-decaying-humerus-nec",
+    "name": "Aspect of Decaying Humerus",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Bone Skills now deal Shadow damage instead of Physical. Enemies take [15 - 25]%[x] increased...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-delayed-extinction-bar",
+    "name": "Aspect of Delayed Extinction",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Mighty Throw and Steel Grasp now gain multiplicative damage instead of cooldown from Cooldown Red...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-earthquakes-bar",
+    "name": "Aspect of Earthquakes",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Ground Stomp creates an Earthquake damaging enemies for [167 - 287] Physical damage over 4 second...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-electrified-claws-dru",
+    "name": "Aspect of Electrified Claws",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shapeshifting into a new animal form causes a Lightning Bolt to strike a Nearby enemy dealing Lig...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-elemental-constellation-sor",
+    "name": "Aspect of Elemental Constellation",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have an equal number of Frost, Pyromancy, and Shock Skills equipped, you deal 120.0% in...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-elemental-fate",
+    "name": "Aspect of Elemental Fate",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 60%[x] increased damage to a set of damage types for 7 seconds alternating randomly between ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-encircling-blades-rog",
+    "name": "Aspect of Encircling Blades",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Cutthroat Skills deal 55%[x] increased damage. This bonus increases to 70%[x] against Injured ene...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-encroaching-wrath-bar",
+    "name": "Aspect of Encroaching Wrath",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After spending 100 Fury, you deal 60%[x] increased Brawling Skill damage for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-endless-talons-spi",
+    "name": "Aspect of Endless Talons",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Razor Wings hitting an enemy increases your Eagle Skill damage by 1%[x] for 4 seconds, up to [30 ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-entrapment-rog",
+    "name": "Aspect of Entrapment",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies damaged by Trap or Grenade Skills take 12.0%[x] increased damage from you, up to 60%[x], ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-exorcism",
+    "name": "Aspect of Exorcism",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 45% chance to Execute enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fathomless-dark-war",
+    "name": "Aspect of Fathomless Dark",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Abyss Skills deal increased damage equal to 80% of your Shadow Resistance Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fierce-winds-bar",
+    "name": "Aspect of Fierce Winds",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shout Skills create 3 Dust Devils that deal 120 damage to enemies along their path.Your Dust...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fleet-wings-spi",
+    "name": "Aspect of Fleet Wings",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Eagle Skill damage is increased by 30.0%[x] of your Movement Speed.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-frenzied-onslaught",
+    "name": "Aspect of Frenzied Onslaught",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Summons gain 50%[+] Attack Speed.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-frozen-memories",
+    "name": "Aspect of Frozen Memories",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Cold damage deals 45%[x] increased damage to Chilled enemies, this bonus is tripled against Froze...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-gloom-nec",
+    "name": "Aspect of Gloom",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you damage enemies with Darkness Skills, they take 15%[x] increased damage from your Darknes...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-gore-quills-nec",
+    "name": "Aspect of Gore Quills",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "NEEDS REDESIGNCasting Blood Lance will consume Blood Orbs to also conjure lances from them. Each ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-herculean-spectacle-bar",
+    "name": "Aspect of Herculean Spectacle",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Mighty Throw deals 45%[x] increased damage and hurls another 2 weapons.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-heresy-war",
+    "name": "Aspect of Heresy",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each different Occult Skill you cast increases all your damage by 14.0%[x] for 15 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-holy-punishment-pal",
+    "name": "Aspect of Holy Punishment",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Holy and Fire damage are increased by 60.0%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-human-ingenuity-dru",
+    "name": "Aspect of Human Ingenuity",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Human Skills' first hit Pull Close enemies towards the hit enemy and Immobilize them for 2 second...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ignition-war",
+    "name": "Aspect of Ignition",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Skills empowered by Volatility deal an additional 40%[x] increased damage and you have a 40.0% ch...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-imitated-imbuement-rog",
+    "name": "Aspect of Imitated Imbuement",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shadow Clones and Shades also mimic the Imbuements applied to your Skills. Casting an Imbuem...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-impending-deluge-dru",
+    "name": "Aspect of Impending Deluge",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Storm Strike's damage is increased by 50%[x] and increases the damage the target takes from your ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-incendiary-fissures-bar",
+    "name": "Aspect of Incendiary Fissures",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Earthquakes deal [35 - 55]%[x] increased damage and their damage is converted into Fire.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-infestation-spi",
+    "name": "Aspect of Infestation",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Pestilent Swarms now also deal 175% of their normal damage as Poisoning damage over 6 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-inner-calm",
+    "name": "Aspect of Inner Calm",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While standing still, deal up to 75%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-iron-rain-rog",
+    "name": "Aspect of Iron Rain",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Smoke Grenade has a 100% chance to create an Arrow Storm where it explodes, dealing 360 Physical ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-jacques-fervor-pal",
+    "name": "Aspect of Jacques' Fervor",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each stack of Fervor grants you 20.0%[x] bonus Critical Strike Damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-lagera-s-sovereignty-pal",
+    "name": "Aspect of Lagera's Sovereignty",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Disciple Skills deal 60.0%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-lapa-s-scripture",
+    "name": "Aspect of Lapa's Scripture",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Losing Resolve grants you 875 Thorns for 10 seconds. Stacks up to 20 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-lava-war",
+    "name": "Aspect of Lava",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Brimstones explode into lava pools, dealing 340% of their damage over 5 seconds. Standing in lava...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-limitless-rage-bar",
+    "name": "Aspect of Limitless Rage",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each point of Fury you generate increases your damage by 1.50%[x]. This bonus is lost after 4 sec...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-malice-rog",
+    "name": "Aspect of Malice",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 55%[x] increased damage to Vulnerable enemies, and 20%[x] increased damage to Knocked Do...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-merciless-cold-sor",
+    "name": "Aspect of Merciless Cold",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Cold direct damage causes enemies to take 15.0% increased Cold damage for 4 seconds, stackin...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-mutilation-war",
+    "name": "Aspect of Mutilation",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "If you fail to Eviscerate an enemy you still apply 25.0% of its Bleeding damage for 3 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-natural-balance-dru",
+    "name": "Aspect of Natural Balance",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Storm Skill grants your Earth Skills 70.0%[x] Critical Strike Damage for 4 seconds.Cast...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-natural-selection-nec",
+    "name": "Aspect of Natural Selection",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have only 1 active Minion type, that Minion type deals 70%[x] increased damage and gain...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-noxious-ice-rog",
+    "name": "Aspect of Noxious Ice",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Chilled enemies Poisoned by Poison Imbuement will be further Chilled for 20% per second. You deal...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-overwhelming-currents-sor",
+    "name": "Aspect of Overwhelming Currents",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shock Skill Critical Strikes grant 3.00%[x] Shock damage for 4 seconds. Stacks do not refresh the...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-peril-war",
+    "name": "Aspect of Peril",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Making an enemy Vulnerable increases the damage you do to them by 3.4%[x], up to 68%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-pestilence-spi",
+    "name": "Aspect of Pestilence",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Pestilent Swarms deal 100%[x] increased damage, last 50% longer, and spiral outwards.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-pestilent-points-rog",
+    "name": "Aspect of Pestilent Points",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "(WIP) Need to replace this with a generic benefit for Basic Skills.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-piercing-static-sor",
+    "name": "Aspect of Piercing Static",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Crackling Energy charges grant 6.0% increased Critical Strike Damage and 2.5% Attack Speed.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-plains-power-spi",
+    "name": "Aspect of Plains Power",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 25%[+] chance to create a Mystic Circle for 10 seconds. Casting a Jaguar Skill...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-plunging-darkness-nec",
+    "name": "Aspect of Plunging Darkness",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Prison is now a Darkness Skill and spawns Blight for 6 seconds. Your Blights deal [40 - 60]%...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-poisonous-clouds-rog",
+    "name": "Aspect of Poisonous Clouds",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When entering Stealth, create a cloud that deals 1,170 Poison damage over 6 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-proselytizing-pal",
+    "name": "Aspect of Proselytizing",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Judicator Skills have a 40% chance to chain to a Close enemy for 150%[x] of their damage. If no e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-rathma-s-chosen-nec",
+    "name": "Aspect of Rathma's Chosen",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Skills have 60%[+] increased Attack Speed while you are Fortified.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-reanimation",
+    "name": "Aspect of Reanimation",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Summons gain increased damage while alive, up to 90%[x] after 10 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-redirected-force",
+    "name": "Aspect of Redirected Force",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain increased Critical Strike Damage equal to 60%[x] of your Block Chance. Blocking doubles this...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-scorching-heat-war",
+    "name": "Aspect of Scorching Heat",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Hellfire Skills deal increased damage equal to 80% of your Fire Resistance Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-searing-impact-sor",
+    "name": "Aspect of Searing Impact",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Meteorites deal 90.0% bonus damage as Burning over 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-serration-nec",
+    "name": "Aspect of Serration",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Corpse and Bone Skills gain 5%[+] increased Critical Strike Chance and 60%[x] increased Crit...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-service-and-sacrifice-nec",
+    "name": "Aspect of Service and Sacrifice",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Skeleton Warriors explode on death, dealing [100 - 200]% Physical damage to surrounding enemies. ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-shattering-steel-bar",
+    "name": "Aspect of Shattering Steel",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Steel Grasp and Iron Maelstrom launch up to 10 metal shards that deal 420 Physical damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-simple-reprisal-spi",
+    "name": "Aspect of Simple Reprisal",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you cast the 3rd attack of your Basic Skills you have a 30% chance to unleash Payback.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-splintering-energy-sor",
+    "name": "Aspect of Splintering Energy",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shock Skills deal 180.0%[x] increased damage, but this bonus is reduced by 10% per subsequen...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-splintering-shards-rog",
+    "name": "Aspect of Splintering Shards",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 100% chance when hitting or killing a Frozen enemy to create ice splinters tha...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-star-shards-rog",
+    "name": "Aspect of Star Shards",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Knives from Dance of Knives have a 50% chance to shatter into 6 shards of metal on hit, dealing [...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-stolen-vigor-rog",
+    "name": "Aspect of Stolen Vigor",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Weakening or Crowd Controlling enemies increases your Cutthroat Skill damage by 60%[x] for 6 seco...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-sundered-ground-bar",
+    "name": "Aspect of Sundered Ground",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 20 seconds, your next Upheaval cast is guaranteed to Overpower and deals 70%[x] increased d...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-supremacy-spi",
+    "name": "Aspect of Supremacy",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies you kill while an Ultimate Skill is active grants a stack of Supremacy, each increasing y...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-surprise-rog",
+    "name": "Aspect of Surprise",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you Evade or Shadow Step, you drop a cluster of exploding Stun Grenades that deal 270 total ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-terror-nec",
+    "name": "Aspect of Terror",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Darkness Skills deal 35.0%[x] increased damage to Crowd Controlled enemies and 35.0%[x] incr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-changeling-s-debt-dru",
+    "name": "Aspect of the Changeling's Debt",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 60%[x] increased Werebear Skill damage to Poisoned enemies or Werewolf Skill damage to C...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-dire-whirlwind-bar",
+    "name": "Aspect of the Dire Whirlwind",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Whirlwind's Critical Strike Chance and Critical Strike Damage are increased by 10%[x] for each se...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-expectant",
+    "name": "Aspect of the Expectant",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Basic Skills grant 6.0%[x] increased damage for 4 seconds, stacking up to 10 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-flaming-rampage-bar",
+    "name": "Aspect of the Flaming Rampage",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Charge gains an additional Charge. Each target hit by it explodes for 194 Fire damage to surround...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-followed-path-dru",
+    "name": "Aspect of the Followed Path",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Skills Cast in the base Shapeshift form gain 60%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-frozen-wake-sor",
+    "name": "Aspect of the Frozen Wake",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Forming an Ice Spike increases their damage by 3.0%[x] for 2 seconds, stacking up to 30 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-golden-hour-pal",
+    "name": "Aspect of the Golden Hour",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Judgement detonations can detonate other Judgements early. Judgement deals 100%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-great-feast-nec",
+    "name": "Aspect of the Great Feast",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have active Minions, your Summons deal 55%[x] increased damage, but each Minion Drains ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-judicator",
+    "name": "Aspect of the Judicator",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Increases the damage and size of Judgement's explosion by x[40-60%].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-juggernaut-s-covenant",
+    "name": "Aspect of the Juggernaut's Covenant",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Consuming Resolve stacks with Juggernaut Oath grants an additional x[60-100%] damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-moonrise",
+    "name": "Aspect of the Moonrise",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Damaging an enemy with a Basic Skill grants you 4% Attack Speed for 10 seconds, stacking up to 5 ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-rabid-bear-dru",
+    "name": "Aspect of the Rabid Bear",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Grizzly Rage is active, your direct damage is converted into Poison damage, you deal [20 - ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-rabid-beast-dru",
+    "name": "Aspect of the Rabid Beast",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Deal 80%[x] more Poison damage. While Shapeshifted, your direct damage is converted into Poison d...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-stampede-dru",
+    "name": "Aspect of the Stampede",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 1 additional Companion. In addition, your Companion Skills deal 35%[x] bonus damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-untarnished-blaze-sor",
+    "name": "Aspect of the Untarnished Blaze",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Healthy, your Pyromancy Skills deal 70%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-ursine-horror-dru",
+    "name": "Aspect of the Ursine Horror",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Pulverize is now also an Earth Skill. After it Overpowers, your Earth Skill Cooldowns are reduced...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-valintyr-pal",
+    "name": "Aspect of the Valintyr",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Justice Skills deal 80.0%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-warpath-bar",
+    "name": "Aspect of the Warpath",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have Overpower charges, your Bludgeoning weapon attacks deal 60%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-zealot-s-covenant-pal",
+    "name": "Aspect of the Zealot's Covenant",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Additional hits from Zealot Oath deal 120.0%[x] increased damage.Your Maximum Fervor is increased...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-thickened-blood-nec",
+    "name": "Aspect of Thickened Blood",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Skills deal up to 90%[x] increased damage based on how Fortified you are.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-true-sight-rog",
+    "name": "Aspect of True Sight",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 200%[x] increased damage to enemies marked by Inner Sight. While Inner Sight is full, yo...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-tyrael-s-jurisdiction-pal",
+    "name": "Aspect of Tyrael's Jurisdiction",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Arbiter's Wing Strikes now seek nearby enemies and deal 240%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ultimate-shadow-nec",
+    "name": "Aspect of Ultimate Shadow",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Desecrated Ground deals 120%[x] increased damage and Slows enemies by 50%.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-unstable-imbuements-rog",
+    "name": "Aspect of Unstable Imbuements",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When casting an Imbuement Skill you trigger an explosion around yourself, applying the Imbuement ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-untimely-death-nec",
+    "name": "Aspect of Untimely Death",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 10% of your Maximum Life Healed grants you grants you 90%[x] increased Blood Skill damage f...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-unyielding-hits-spi",
+    "name": "Aspect of Unyielding Hits",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Gorilla Skill increases your Weapon Damage by 30% of your Armor for 3 seconds. Maximum ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-utmost-glory-pal",
+    "name": "Aspect of Utmost Glory",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Healthy your Skills deal 35%[x] increased damage. Double this bonus against Weakened enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-volatile-shadows-rog",
+    "name": "Aspect of Volatile Shadows",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shadow Imbuement deals 10%[x] increased damage per Skill Rank of the Imbued Skill. Every 10 secon...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-walloping-bar",
+    "name": "Aspect of Walloping",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Skills using Bludgeoning weapons deal 60%[x] increased damage if the enemy is Incapacitated ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-watkins-law",
+    "name": "Aspect of Watkins' Law",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Judicator Skills deal x[45-65%] increased damage against enemies affected by Judgement.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-wild-claws-spi",
+    "name": "Aspect of Wild Claws",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Hitting enemies with Jaguar Skills increases the damage they take from you by 0.80%[x], up to 80....",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-wolf-s-rain-dru",
+    "name": "Aspect of Wolf's Rain",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting Hurricane also spawns a smaller hurricane on your Wolves for 8 seconds. These hurricanes ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "battle-caster-s-aspect-sor",
+    "name": "Battle Caster's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: When your Conjuration Skills hit you have up to a [25 - 45]% chance to gain +1 Rank to...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bladedancer-s-aspect-rog",
+    "name": "Bladedancer's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Twisting Blades orbit for a short time after they return to you, dealing 140% of Twisting Blades'...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blast-trapper-s-aspect-rog",
+    "name": "Blast-Trapper's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Dealing damage to enemies affected by your Trap Skills has a 35% chance to cause an ex...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blasting-aspect-sor",
+    "name": "Blasting Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Ice Spikes and Meteorites deal 90%[x] increased damage and have 50%[+] increased size.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blighted-aspect-nec",
+    "name": "Blighted Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Consecutive hits with the Shadowblight Key Passive deal [15.0 - 25.0]%[x] increased damage for ea...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bone-breaker-s-aspect-nec",
+    "name": "Bone Breaker's Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Skills deal 100%[x] increased damage. This bonus is reduced by 10% per subsequent enemy hit.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bone-duster-s-aspect-nec",
+    "name": "Bone Duster's Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Spear is guaranteed to Critically Strike enemies within Bone Prison and deals [20 - 40]% inc...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "brawler-s-aspect-bar",
+    "name": "Brawler's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies damaged by Kick or Charge will explode if they are killed within the next 2 seconds, deal...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "breakneck-bandit-s-aspect-rog",
+    "name": "Breakneck Bandit's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Cutthroat Skills have up to a 50% chance to Execute enemies.Cutthroat Skills deal 45%[...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bristleback-aspect",
+    "name": "Bristleback Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you Dodge or Block an attack you trigger a 300% Thorns attack against the attacker.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "brutal-aspect-war",
+    "name": "Brutal Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 185% of your Attack Speed as increased damage but no longer attack faster.Current Bonus:...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "cadaverous-aspect-nec",
+    "name": "Cadaverous Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Consuming a Corpse increases your damage by 13%[x] for 5 seconds, up to 65%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "conceited-aspect",
+    "name": "Conceited Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Deal 60%[x] increased damage while you have a Barrier active.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "conjuration-master-s-aspect-sor",
+    "name": "Conjuration Master's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your maximum number of Conjurations is increased by 1 and your Conjuration damage is increased by...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "crashstone-aspect-dru",
+    "name": "Crashstone Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Earth Skills deal 70%[x] increased damage to Crowd Controlled enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "cremator-s-aspect",
+    "name": "Cremator's Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have 4 or more Overpower, your Fire Skill Casts deal 100%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "crushing-aspect",
+    "name": "Crushing Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Fortified, you deal 65%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "cut-to-the-bone-aspect-bar",
+    "name": "Cut to the Bone Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Damage Over Time effects deal 60.0%[x] increased damage to Vulnerable enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "deadeye-s-aspect-rog",
+    "name": "Deadeye's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Marksman Skills deal 60%[x] increased Critical Strike Damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "demonic-aspect-war",
+    "name": "Demonic Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each hit with Demonology Skills increases the damage you deal with Demonology Skills by 3.3%[x] f...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "devilish-aspect-bar",
+    "name": "Devilish Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After generating 100 Fury your next direct damage creates 2 Dust Devils that deal 105 damage to e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "duelist-s-aspect",
+    "name": "Duelist's Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While using a One-Handed weapon, your Attack Speed is increased by 50%[+].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "dust-devil-s-aspect-bar",
+    "name": "Dust Devil's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Whirlwind leaves behind Dust Devils that deal 210 damage to enemies in their path. Enemies hit by...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "edgemaster-s-aspect",
+    "name": "Edgemaster's Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Skills deal up to 60%[x] increased damage based on your available Primary Resource when cast, rec...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "elementalist-s-aspect-sor",
+    "name": "Elementalist's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Skill Casts at or above 100 Mana gain a 45.0%[+] increased Critical Strike Chance.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "envenomed-aspect-dru",
+    "name": "Envenomed Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 40%[+] bonus Critical Strike Damage against Poisoned enemies. Companions Skills gain dou...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "executioner-s-aspect-bar",
+    "name": "Executioner's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Overpowers will spawn an Earthquake every 4 seconds that deals 702 Physical damage over 4 se...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ferocious-aspect",
+    "name": "Ferocious Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Maximum Ferocity stacks are increased by 6.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "flash-fire-aspect-sor",
+    "name": "Flash Fire Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Increase the Critical Strike Damage of Pyromancy Skills by [25 - 45]%[x]. Double this bonus again...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "frostbitten-aspect-rog",
+    "name": "Frostbitten Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies hit by your Stun Grenades have a chance equal to your Critical Strike Chance to be Frozen...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "galvanic-aspect",
+    "name": "Galvanic Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Lightning damage has up to a 15% chance to echo 75% of its damage to up to 2 Close ene...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "grenadier-s-aspect-rog",
+    "name": "Grenadier's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Grenade Skills deal 50%[x] increased damage. This bonus increases to 75.0%[x] against Crowd Contr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "heavy-hitting-aspect-bar",
+    "name": "Heavy Hitting Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your skills that create Iron Shrapnel, Earthquakes, or Dust Devils deal 60.0%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "hellbent-commander-aspect",
+    "name": "Hellbent Commander Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 70%[x] increased Summon damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "high-velocity-aspect-rog",
+    "name": "High Velocity Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Marksman Skills deal 55%[x] increased damage. This bonus increases to 80%[x] against Healthy enem...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "insatiable-aspect-spi",
+    "name": "Insatiable Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Centipede Skills deal 45.0%[x] increased damage, further increased to 90.0%[x] against Crowd Cont...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "insidious-aspect-war",
+    "name": "Insidious Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Abyss Skills deal 80.0%[x] increased damage to enemies who have not hit you in the last 2 se...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "joltkeeper-s-aspect-sor",
+    "name": "Joltkeeper's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Crackling Energy has a 25% chance to preserve its charge and deals 60%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "lightning-dancer-s-aspect-dru",
+    "name": "Lightning Dancer's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Dancing Bolt deals 145%[x] increased damage and moves 50% faster.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "lingering-aspect-sor",
+    "name": "Lingering Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Mastery Skills deal 30.0%[x] increased damage every second they are active.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "malicious-aspect-war",
+    "name": "Malicious Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While in Demonform, you deal 4.5%[x] increased damage for every Demon or enemy Close to you, up t...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "mighty-storm-s-aspect-dru",
+    "name": "Mighty Storm's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "The Earthen Might Key Passive also applies to your Storm Skills.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "nature-s-reach-aspect-dru",
+    "name": "Nature's Reach Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Human Skills deal an additional 60%[x] bonus damage to Distant enemies. This bonus increases by a...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "needleflare-aspect",
+    "name": "Needleflare Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Thorns damage dealt has a 60% chance to deal damage to all enemies around you and your Minions.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "neurotoxic-aspect",
+    "name": "Neurotoxic Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 60%[x] increased Non-Physical damage to enemies that are Hindered or Weakened.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "nightstalker-s-aspect-rog",
+    "name": "Nightstalker's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shade Skills deal 60%[x] increased damage and gain a 50% chance to spawn an additional Shade.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "of-cold-judgement-aspect-sor",
+    "name": "of Cold Judgement Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Frost Skills deal 90%[x] increased damage while no enemies are Close to you.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "of-compound-fracture-aspect-nec",
+    "name": "of Compound Fracture Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After Critically Striking 10 times with Bone Skills, your Bone Skills deal 70%[x] increased damag...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ominous-aspect-war",
+    "name": "Ominous Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While standing still, gain 14.0%[x] increased damage against Distant enemies for 2 seconds, up to...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "opportunist-s-aspect-rog",
+    "name": "Opportunist's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you enter or break Stealth, you drop a cluster of exploding Stun Grenades around you that de...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "osseous-gale-aspect-nec",
+    "name": "Osseous Gale Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Storm consumes up to 8 Corpses to increase its duration by up to 15.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "overwhelming-aspect-war",
+    "name": "Overwhelming Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each hit against Elite enemies deals 120%[x] increased damage but requires and consumes 4 stacks ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "powershifting-aspect-dru",
+    "name": "Powershifting Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 13.8%[x] bonus damage for 6 seconds whenever you Shapeshift into a different form. Stacks up...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "progenitor-s-aspect-bar",
+    "name": "Progenitor's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your skills that summon Ancients deal 60.0%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ranger-s-aspect-rog",
+    "name": "Ranger's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Marksman Skills deal 60%[x] increased damage to Distant enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "reaper-s-aspect-spi",
+    "name": "Reaper's Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies you Poison have 100% Reduced Healing and your Eagle Skills gain 50%[+] increased Critical...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "rebounding-aspect-spi",
+    "name": "Rebounding Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 60%[+] increased Dodge Chance during Evade.Whenever you Evade or use a Non-Basic Mobility Sk...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "remorseless-aspect-war",
+    "name": "Remorseless Aspect",
+    "class": "Warlock",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Killing at least 30 enemies or Demons within 10 seconds increases your damage by 60%[x] for 10 se...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "revelator-s-aspect-pal",
+    "name": "Revelator's Aspect",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Zealot Skills deal 32.5%[x] increased damage, doubled while at 3 or more stacks of Fervor.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "rip-and-tear-aspect-spi",
+    "name": "Rip and Tear Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Rushing Claw deals 30%[x] increased damage and is empowered based on how many Charges it has when...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "rotting-aspect-nec",
+    "name": "Rotting Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Decompose can chain and burst up to 4 additional targets. Explosions from Decompose deal 35%[x] i...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "runeworker-s-conduit-aspect-dru",
+    "name": "Runeworker's Conduit Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Critical Strikes with Storm Skills cause Lightning Bolts to periodically strike close enemies for...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ruthless-aspect-spi",
+    "name": "Ruthless Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Jaguar Skills gain 50%[+] Critical Strike Chance and they deal 30%[x] increased damage to In...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sacrificial-aspect-nec",
+    "name": "Sacrificial Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Sacrifice bonuses are increased by 80%.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "scornful-aspect-sor",
+    "name": "Scornful Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Pyromancy Skills deal 60%[x] increased damage against Distant or Immobilized enemies. These ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "seismic-shift-aspect-dru",
+    "name": "Seismic-shift Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Earth Skills deal 180%[x] damage to Healthy enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "serpentine-aspect-sor",
+    "name": "Serpentine Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting Hydra Consumes all your Mana to increase its damage by [0.5 - 2.5]%[x] per Mana Consumed.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "shadowslicer-aspect-rog",
+    "name": "Shadowslicer Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Dash Summons a Shadow Clone that also casts Dash, dealing 350% of the Base damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "shepherd-s-aspect-dru",
+    "name": "Shepherd's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Companion Skills deal an additional 13.0%[x] damage per Companion you have.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "shivering-aspect-sor",
+    "name": "Shivering Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies take up to [20 - 40]%[x] increased damage based on how much they are Chilled or Staggered...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "skullbreaker-s-aspect-bar",
+    "name": "Skullbreaker's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Incapacitating a Bleeding enemy deals 60% of their total Bleeding amount as Physical damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "slice-and-dice-aspect-rog",
+    "name": "Slice and Dice Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Twisting Blades' initial hit cleaves. Twisting Blades return [25 - 45]% faster.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "splintering-aspect-nec",
+    "name": "Splintering Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Bone Skills deal 70%[x] increased damage to Vulnerable enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "starving-ravager-s-aspect-spi",
+    "name": "Starving Ravager's  Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Ravager no longer has a duration and instead drains 4 Vigor every second until depleted. Effects ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "stoneworker-s-aspect-dru",
+    "name": "Stoneworker's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Tectonic Spikes gain 100%[x] increased damage, and its Size is increased by 50%.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "storm-splitter-s-aspect-sor",
+    "name": "Storm Splitter's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your non-Channeled Shock Skills deal 45%[x] increased damage and have a 15% chance to trigger the...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "stormchaser-s-aspect-dru",
+    "name": "Stormchaser's Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Tornado drags non-Elite enemies with it and deals 40.0%[x] increased damage. Each enemy or object...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "subterranean-aspect-dru",
+    "name": "Subterranean Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Poison Creeper's active also casts Landslide in a circle around you. Earth Skills deal 35% increa...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sunderfrost-aspect-sor",
+    "name": "Sunderfrost Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Frost damage is increased by 75% against Vulnerable enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "the-penitent-s-aspect-pal",
+    "name": "The Penitent's Aspect",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Spending Health on a Skill grants you 15.0% Critical Strike Chance and 55%[x] Critical Strike Dam...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "tidal-aspect",
+    "name": "Tidal Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Maximum Overpower is increased by 4 while you are Fortified.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "tides-of-blood-aspect-nec",
+    "name": "Tides of Blood Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Skills deal 35%[x] increased damage while you have a stack of Overpower. This bonus is doub...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "tormentor-s-aspect-spi",
+    "name": "Tormentor's Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Poisoning effects cause enemies to take 200% of your Thorns damage per second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "toxic-alchemist-s-aspect-rog",
+    "name": "Toxic Alchemist's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Shadow damage has up to a 75% chance to create a toxic explosion that applies 75 Poiso...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "trapper-s-aspect-rog",
+    "name": "Trapper's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Trap Skills deal 60%[x] increased damage to Vulnerable enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "trickster-s-aspect-rog",
+    "name": "Trickster's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Trap and Grenade Skills deal 60%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "unrelenting-aspect",
+    "name": "Unrelenting Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Knock Downs cause enemies to take 60%[x] damage from you for 6 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "unyielding-commander-s-aspect-nec",
+    "name": "Unyielding Commander's Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Army of the Dead is active, your Minions take 90% reduced damage and you deal 110%[x] incre...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vanguard-s-aspect-pal",
+    "name": "Vanguard's Aspect",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Juggernaut Skills deal 140%[x] increased damage to the first 3 enemies hit.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vanquishing-aspect",
+    "name": "Vanquishing Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You deal 90%[x] more damage to Incapacitated enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vehement-brawler-s-aspect",
+    "name": "Vehement Brawler's Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting an Ultimate Skill increases your damage by [10 - 30]%[x] for 8 seconds. Gain 4 additional...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vengeful-aspect-rog",
+    "name": "Vengeful Aspect",
+    "class": "Rogue",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Arrow Storms deal 120%[x] increased damage and gain 50%[+] increased Size.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "veteran-brawler-s-aspect-bar",
+    "name": "Veteran Brawler's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each time a Brawling Skill deals direct damage to an enemy, your Charge, Leap, or Kick deals 10.0...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "virtuous-aspect-pal",
+    "name": "Virtuous Aspect",
+    "class": "Paladin",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Using a Valor skill increases your damage by 60.0%[x] for 0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "virulent-aspect-dru",
+    "name": "Virulent Aspect",
+    "class": "Druid",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When Rabies infects an enemy, reduce its Cooldown by 1.00 seconds, tripled when infecting Elite e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "wanton-rupture-aspect-bar",
+    "name": "Wanton Rupture Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "All Damage Over Time durations and damage is increased by 30%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "windlasher-aspect-bar",
+    "name": "Windlasher Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting Double Swing creates a Dust Devil that deals 83 damage to enemies in its path.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "writhing-aspect",
+    "name": "Writhing Aspect",
+    "class": "all",
+    "slots": [
+      "gloves",
+      "offhand",
+      "weapon",
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Enemies take 12.5% increased Damage Over Time for every second they've been affected by a Damage ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-angelic-masterwork-pal",
+    "name": "Aspect of Angelic Masterwork",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your All Resistance is increased by 140.0% while in Arbiter form.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-bul-kathos-bar",
+    "name": "Aspect of Bul-Kathos",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Leap creates an Earthquake that deals 326 Physical damage over 4 seconds. While standing in Earth...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-coagulation",
+    "name": "Aspect of Coagulation",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 30%[+] increased Fortify generation and 20% Damage Reduction while Fortified.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-concentration-sor",
+    "name": "Aspect of Concentration",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Conjuration Skill grants you 30.0%[x] Damage Reduction for 5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-death-s-defense-nec",
+    "name": "Aspect of Death's Defense",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You and your Minions gain 30%[x] increased Maximum Life.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-debilitating-toxins",
+    "name": "Aspect of Debilitating Toxins",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 30.0% Damage Reduction, and Poisoned enemies deal 15% less damage to you.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-deflection-spi",
+    "name": "Aspect of Deflection",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While active, Counterattack reflects incoming Razor Wings back out again with 50% increased damag...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-diabolical-armor-war",
+    "name": "Aspect of Diabolical Armor",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Demonform grants 20% Damage Reduction plus an additional 1.0% for 5 seconds any time you take Fir...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-disobedience",
+    "name": "Aspect of Disobedience",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Damage over Time grants you 1.5% Damage Reduction for 2 seconds, stacking up to 30 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-endurance",
+    "name": "Aspect of Endurance",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Resolve has a 12% chance to not be lost when you are hit for each stack of Ferocity you have...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fevered-mauling-dru",
+    "name": "Aspect of Fevered Mauling",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you hit at least 1 enemy with Maul, increase its Attack Speed by 3.0%[+] and you gain 5.0%[x...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-firm-decree-pal",
+    "name": "Aspect of Firm Decree",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Judging an enemy grants you 30% Damage Reduction for 8 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-forest-power-spi",
+    "name": "Aspect of Forest Power",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 25%[+] chance to create a Mystic Circle for 10 seconds. Casting a Gorilla Skil...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-glynn-s-anvil",
+    "name": "Aspect of Glynn's Anvil",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your maximum Resolve is increased by 2 and you gain 4% Damage Reduction per Resolve.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-hardened-bones-nec",
+    "name": "Aspect of Hardened Bones",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 25% increased Damage Reduction. When you take damage, you have a 15% chance to form a Co...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-heavenly-strength",
+    "name": "Aspect of Heavenly Strength",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While wielding a Two-Handed Weapon, gain 40% Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-layered-wards",
+    "name": "Aspect of Layered Wards",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Blocked Damage Reduction is increased by 40%[+].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-lethal-dusk-rog",
+    "name": "Aspect of Lethal Dusk",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "(WIP) This will become a benefits for coming out of Stealth Aspect. Part of existing: Breaking St...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-might",
+    "name": "Aspect of Might",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Basic Skills grant 30% Damage Reduction for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-militance-pal",
+    "name": "Aspect of Militance",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Critically Striking has up to a 25% chance to Fortify for 0.50% of your Maximum Life f...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-scorn-war",
+    "name": "Aspect of Scorn",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you lose at least 10% of your Maximum Life, you kill Lesser Demons that each absorb up to 10...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-shelter",
+    "name": "Aspect of Shelter",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Defensive Skill grants you 50%[+] increased All Resistances for 10 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-spiked-armor",
+    "name": "Aspect of Spiked Armor",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 60%[+] increased Total Armor, 2,415 Thorns, and 15%[+] increased Block Chance.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-tempering-blows",
+    "name": "Aspect of Tempering Blows",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After swapping weapons 5 times, gain 30% Damage Reduction for 10 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-temporal-incisions-spi",
+    "name": "Aspect of Temporal Incisions",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Upon casting an Ultimate Skill, the last different Potency, Defensive, or Focus Skill you Cast pr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-tenuous-survival-sor",
+    "name": "Aspect of Tenuous Survival",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have no Defensive Skills equipped, gain 30% Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-disciple-pal",
+    "name": "Aspect of the Disciple",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Disciple skills now Weaken enemies for 6.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-fortress",
+    "name": "Aspect of the Fortress",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain up to 60% Damage Reduction based on how Injured you are.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-indomitable",
+    "name": "Aspect of the Indomitable",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain up to 45% Damage Reduction and Impairment Resistance, based on your Block chance.Current Bon...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-iron-warrior-bar",
+    "name": "Aspect of the Iron Warrior",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Iron Skin grants Unstoppable, and 40% Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-protector",
+    "name": "Aspect of the Protector",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Damaging an Elite enemy grants you a Barrier for 100% of your Maximum Life for 10 seconds. This e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bruiser-s-aspect",
+    "name": "Bruiser's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 4%[+] increased Armor and 290 Thorns per 1% missing Maximum Life.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bulwark-s-aspect",
+    "name": "Bulwark's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You no longer Dodge, but you gain 30% Block Damage Reduction and 15%[+] Block Chance.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "cheat-s-aspect-rog",
+    "name": "Cheat's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 20.0%[+] Damage Reduction and 10%[+] increased Movement Speed. These bonuses are doubled...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "encased-aspect",
+    "name": "Encased Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Freezing enemies grants you 8.0% Damage Reduction for 8 seconds, up to 5 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "enshrouding-aspect",
+    "name": "Enshrouding Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Using a Healing Potion increases your Resistance to All Elements by 30%[+] for 8 seconds.You may ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "escape-artist-s-aspect-rog",
+    "name": "Escape Artist's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Upon taking damage from surrounding enemies, you drop a Smoke Grenade and Dodge the next 10 attac...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "everliving-aspect",
+    "name": "Everliving Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each Crowd Controlled enemy Nearby grants 3.0% Damage Reduction, up to 13 enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "iron-blood-aspect-bar",
+    "name": "Iron Blood Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 5.9% Damage Reduction for each Nearby Bleeding enemy up to 30% maximum.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "irrepressible-aspect-bar",
+    "name": "Irrepressible Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Weapon Mastery Skill Fortifies you for 5% of your Maximum Life. Increase your Maximum L...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "juggernaut-s-aspect",
+    "name": "Juggernaut's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 150%[+] Total Armor, but your Evade has 100% increased Cooldown.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "mage-lord-s-aspect-sor",
+    "name": "Mage-Lord's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Dealing Shock damage to Close enemies grants 45% Damage Reduction for 6 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "misanthropic-aspect-war",
+    "name": "Misanthropic Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 40%[+] increased Maximum Life if you have not had more than 1 active Demon in the last 5 sec...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "of-arcane-ward-aspect-sor",
+    "name": "of Arcane Ward Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Mastery Skills grant 30% Damage Reduction while their effects are active.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "protecting-aspect",
+    "name": "Protecting Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When hit while not Healthy, you form a protective bubble that grants all Players inside Immune. T...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "snap-frozen-aspect",
+    "name": "Snap Frozen Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Dealing Cold damage has up to a 20% chance to grant you a Barrier for 10.0% of your Ma...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "snowveiled-aspect",
+    "name": "Snowveiled Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While you have a Barrier, gain 30% Damage Reduction.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "spirit-bond-aspect-dru",
+    "name": "Spirit Bond Aspect",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "20.0% of the damage you would take is redirected across your Companions. Your Companions cannot die.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vigorous-aspect-dru",
+    "name": "Vigorous Aspect",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 30%[x] Damage Reduction while Shapeshifted into a Werewolf or Human.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aphotic-aspect",
+    "name": "Aphotic Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Shadow damage gains 30%[x] increased Lucky Hit Chance.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-accursed-touch",
+    "name": "Aspect of Accursed Touch",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 40.0% chance for your Skills to inflict Vampiric Curse on enemies. Enemies aff...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-anemia-bar",
+    "name": "Aspect of Anemia",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Damaging enemies affected by Damage over Time or Vulnerable enemies has up to a 30% ch...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-apprehension-spi",
+    "name": "Aspect of Apprehension",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Once an enemy is Slowed by at least 80%, they also become Feared for 3 seconds. You deal 40%[x] i...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-audacity",
+    "name": "Aspect of Audacity",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When there are at least 5 Close enemies, Stun them for 4.5 seconds. Can only occur once every 20 ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-biting-cold",
+    "name": "Aspect of Biting Cold",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Cold damage is increased by 20.0% and makes enemies Vulnerable for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-booming-voice-bar",
+    "name": "Aspect of Booming Voice",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shout Skill effect durations are increased by 30%[+] and Weaken enemies for 5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-cauterization-war",
+    "name": "Aspect of Cauterization",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Taking Direct Damage while you have Volatility has a 75% chance to either strike you for an addit...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-concussive-blend-rog",
+    "name": "Aspect of Concussive Blend",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Stun Grenades gain [45%[+] increased Size and 90%[+] increased Crowd Control Duration.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-crippling-darkness",
+    "name": "Aspect of Crippling Darkness",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Shadow damage has up to a 15% chance to deal 30%[x] increased damage, Fear and Immobil...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-dazzling-light-pal",
+    "name": "Aspect of Dazzling Light",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "The first time you apply Judgement to an enemy, you Daze them for 3.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-debilitating-darkness-nec",
+    "name": "Aspect of Debilitating Darkness",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Desecrated Ground deals 25%[x] increased damage and makes enemies Vulnerable.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-deeper-shadows-war",
+    "name": "Aspect of Deeper Shadows",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Maximum Shadowform stacks increased by 6.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-dominance",
+    "name": "Aspect of Dominance",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Crowd Controlling an enemy grants 2 Resolve.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-elusive-menace",
+    "name": "Aspect of Elusive Menace",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Dodge Chance increases by 30%[+] whenever you take damage. Successfully Dodging resets this ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-excellence-pal",
+    "name": "Aspect of Excellence",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Losing 0 Resolve grants 50% increased Retribution chance for 10 seconds.Retribution gains 50%[+] ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-explosive-verve-rog",
+    "name": "Aspect of Explosive Verve",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Grenade Skills count as Trap Skills. Whenever you arm a Trap or drop Grenades, you gain 30%[...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-falling-feathers-spi",
+    "name": "Aspect of Falling Feathers",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Moving with a Mobility Skill or Evade spawns Storm Feathers behind you.Storm Feathers now drop fr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fiendish-oppression-war",
+    "name": "Aspect of Fiendish Oppression",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Summoning a Greater Demon Knocks Down enemies around it for 5 seconds. Your Lesser Demon Skills d...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-fortune",
+    "name": "Aspect of Fortune",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 20.0%[x] Lucky Hit Chance against Elite enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-grasping-whirlwind-bar",
+    "name": "Aspect of Grasping Whirlwind",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Whirlwind Pulls enemies to you every 3.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-hewed-flesh-nec",
+    "name": "Aspect of Hewed Flesh",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 25% chance to form a Corpse at the target's location. Your Corpse Skills deal ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-immolation-war",
+    "name": "Aspect of Immolation",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "The duration of any Volatility or Demonform you gain is increased by 200%[+] if you have the other.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-interdiction",
+    "name": "Aspect of Interdiction",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 3.0%[+] Block Chance per Resolve stack.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-kinetic-suppression-spi",
+    "name": "Aspect of Kinetic Suppression",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Non-Basic Mobility Skill grants 3 Resolve.Casting a Defensive Skill with 8 stacks of Re...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-malevolence-war",
+    "name": "Aspect of Malevolence",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain Overpower for each 10 Wrath you gain while at Maximum Wrath.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-mending-obscurity-rog",
+    "name": "Aspect of Mending Obscurity",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When entering Stealth and every second while Stealthed, you Heal for 15.0% of your Maximum Life. ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-mending-stone-dru",
+    "name": "Aspect of Mending Stone",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Earth Skills Fortify you for 6.00% of your Maximum Life when first dealing damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-mind-s-awakening-sor",
+    "name": "Aspect of Mind's Awakening",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Pyromancy Skill Immobilizes enemies hit for [0.5 - 1] seconds. Casting a Shock Skill gr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-misfortune-war",
+    "name": "Aspect of Misfortune",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Hexed enemies that try to attack you have a 30.0% chance to instead be Knocked Down for 3 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-natural-instincts-dru",
+    "name": "Aspect of Natural Instincts",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each Druid form gains a bonus every 5.0 seconds: Wolf 1 stack of Ferocity. Bear 1 stack of Overpo...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-piercing-cold",
+    "name": "Aspect of Piercing Cold",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You apply 50.0%[x] more Chill and deal 20%[x] increased damage to Chilled enemies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-potent-exchange-spi",
+    "name": "Aspect of Potent Exchange",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 1 Resolve when you Dodge an attack. Your Potency Skills consume 2 Resolve to deal 30%[x] inc...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-quickening-fog-rog",
+    "name": "Aspect of Quickening Fog",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You automatically drop a Smoke Grenade at the end of Dash. Smoke Grenades reduce Dash's Cooldown ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-rallying-reversal",
+    "name": "Aspect of Rallying Reversal",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You have a 80% chance to gain 1 Ferocity when you Crowd Control an enemy or apply any Stagger to ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-reactive-armor-spi",
+    "name": "Aspect of Reactive Armor",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 10%[+] Block Chance. Blocking an attack from an enemy has a 70% chance to invoke a free Conc...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-recalling-feathers-spi",
+    "name": "Aspect of Recalling Feathers",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Focus Skill recalls all Nearby Storm Feathers, dealing 450 Lightning damage and makes e...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-retribution",
+    "name": "Aspect of Retribution",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Distant enemies have a 20% chance to be Stunned for 2 seconds when they hit you. You deal 25%[x] ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-shielding-bones-nec",
+    "name": "Aspect of Shielding Bones",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Bone Skill grants 2 stacks of Resolve. Gain 30%[+] increased All Resistances while you ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-shredding-blades-sor",
+    "name": "Aspect of Shredding Blades",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Conjuration damage makes enemies Vulnerable for 4 seconds. You deal 20.0%[x] increased damage to ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-soil-power-spi",
+    "name": "Aspect of Soil Power",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 25%[+] chance to create a Mystic Circle for 10 seconds. Casting a Centipede Sk...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-tenacity-spi",
+    "name": "Aspect of Tenacity",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain Resolve for each 15 Vigor you gain while at Maximum Vigor. This can overfill your Resolv...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-cursed-aura-nec",
+    "name": "Aspect of the Cursed Aura",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "A dark aura surrounds you, inflicting Decrepify and Iron Maiden on enemies who touch it. Curses i...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-dark-howl-dru",
+    "name": "Aspect of the Dark Howl",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Debilitating Roar is now a Werewolf Skill. In addition, Debilitating Roar will Immobilize Poisone...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-embalmer-nec",
+    "name": "Aspect of the Embalmer",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Consuming a Corpse has a 25% chance to spawn a Blood Orb. Blood Orb Healing is increased by 45%.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-enchanter-sor",
+    "name": "Aspect of the Enchanter",
+    "class": "Sorcerer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 20.0% Enchantment Potency.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-light-s-mending-pal",
+    "name": "Aspect of the Light's Mending",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Consuming Judgement Heals 3.5% of your Maximum Life to you and Nearby Allies.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-northern-guard",
+    "name": "Aspect of the Northern Guard",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blocks have a 45% chance to Freeze the attacker for 3 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-shapeshifter-dru",
+    "name": "Aspect of the Shapeshifter",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your form bonuses are maintained and you deal 18.0% increased damage for 4 seconds when shapeshif...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-void-nec",
+    "name": "Aspect of the Void",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Darkness Skills Weaken enemies for 4 seconds. Darkness Skills deal 15%[x] increased damage to Wea...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-transfusion-nec",
+    "name": "Aspect of Transfusion",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Blood Skills have up to a 50% chance to create a Blood Orb at the target's location.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-turbulence-spi",
+    "name": "Aspect of Turbulence",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Soar casts Vortex at its landing location and deals 45%[x] increased damage.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-valiance-pal",
+    "name": "Aspect of Valiance",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Valor Skills generate 6 Resolve when cast.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-warmth",
+    "name": "Aspect of Warmth",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each Nearby Burning enemy Heals you for 3.0% of your Maximum Life every second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bane-link-aspect-war",
+    "name": "Bane-Link Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Hexed enemies are Slowed by 70% for 3 seconds when you make them Vulnerable or become Vulnerable ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "battle-fervor-s-aspect-bar",
+    "name": "Battle Fervor's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Brawling Skills grant Berserking for 5 seconds on their first hit. Gain 15.0% Damage Reduction wh...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "battle-mad-aspect-bar",
+    "name": "Battle-Mad Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After swapping weapons 5 times gain Berserking for 4 seconds. Additionally, you deal 20.0%[x] inc...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blood-boiling-aspect",
+    "name": "Blood Boiling Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 6 seconds, gain 1 stack of Overpower. Gaining Overpower spawns 1 Volatile Blood Drop, and c...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blood-getter-s-aspect-nec",
+    "name": "Blood Getter's Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Skeletal Priests now also empower you at 75% effectiveness.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "coldbringer-s-aspect-nec",
+    "name": "Coldbringer's Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 4 seconds, your Skeletal Mages cast a blizzard that deals 180 Cold damage and continuously ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "earthstriker-s-aspect",
+    "name": "Earthstriker's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 1 Overpower stack each time you swap weapons. You deal 20.5%[x] increased damage while you h...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "eluding-aspect",
+    "name": "Eluding Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Becoming Crowd Controlled while Injured grants you Unstoppable for 4 seconds. This effect has a 4...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "embattled-aspect",
+    "name": "Embattled Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Fortify's Drain Rate is increased by 150%[+].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "enfeebling-aspect-war",
+    "name": "Enfeebling Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Making an enemy Vulnerable has a 40% chance to also Weaken them for 3 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "exploiter-s-aspect",
+    "name": "Exploiter's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You have 50%[+] increased Crowd Control Duration. While enemies are Unstoppable, you deal 50%[x] ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "fell-soothsayer-s-aspect-spi",
+    "name": "Fell Soothsayer's Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When you cast an Incarnate Skill enemies around you become Vulnerable for 5 seconds. Killing a Vu...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "gorefeast-aspect-war",
+    "name": "Gorefeast Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "If you have Eviscerated an enemy in the last 10 seconds, you gain 50%[+] increased Fortify and it...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "great-storm-aspect",
+    "name": "Great Storm Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Lightning damage has up to a 15% chance to grant a stack of Ferocity.You gain 15.0% Da...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "hulking-aspect-nec",
+    "name": "Hulking Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Golem has a 18% chance to reduce its active Cooldown by 2 seconds and a 9.0% chance to spawn...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "icy-alchemist-s-aspect-rog",
+    "name": "Icy Alchemist's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Shadow damage has up to a 75% chance to release an explosion that deals 150 Cold damag...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "impairing-aspect-rog",
+    "name": "Impairing Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Marksman Skills have up to a 40% chance to deal 30%[x] increased damage and Immobilize...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "infiltrator-s-aspect-rog",
+    "name": "Infiltrator's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Poison Trap no longer breaks Stealth and triggers no Cooldown or arm time while you are in Stealt...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "lord-of-blood-s-aspect-pal",
+    "name": "Lord of Blood's Aspect",
+    "class": "Paladin",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Zealot Skills have up to a 20% chance to heal you for 6.0% of your missing Life.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "luckbringer-aspect-bar",
+    "name": "Luckbringer Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 30%[+] increased Lucky Hit Chance while all damage bonuses from the Walking Arsenal Key Pass...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "menacing-aspect-spi",
+    "name": "Menacing Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Scourge continuously affects enemies around you for 9.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "mired-sharpshooter-s-aspect-rog",
+    "name": "Mired Sharpshooter's  Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Caltrops is now also a Marksman Skill that also throws 25 piercing daggers over its duration, eac...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "necrotic-carapace-aspect-nec",
+    "name": "Necrotic Carapace Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When a Corpse is formed from your Skills or your Minions, Fortify for 7% of your Maximum Life.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "nefarious-aspect-war",
+    "name": "Nefarious Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Becoming Crowd Controlled while you have Shadowform will consume a stack to apply it back to the ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "of-siphoning-strikes-aspect-rog",
+    "name": "of Siphoning Strikes Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Cutthroat Skills have up to a 65% chance to Heal you for 3% of your Maximum Life.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "overcharged-aspect-dru",
+    "name": "Overcharged Aspect",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Storm Skill damage makes enemies Vulnerable for 4 seconds. You deal 20.0%[x] increased damag...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "overheating-aspect",
+    "name": "Overheating Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Slain Burning enemies have a 10% chance to grant Overpower. Your Fire damage is increased by 20.0...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "prepared-assailant-s-aspect-rog",
+    "name": "Prepared Assailant's Aspect",
+    "class": "Rogue",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Breaking Stealth grants 4 Resolve. Gain an additional 30%[+] Armor while you have Resolve.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "pyroclastic-aspect-war",
+    "name": "Pyroclastic Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Brimstone explosions are 50% larger and deal 15%[x] increased damage. Brimstones instantly detona...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "raid-leader-s-aspect-bar",
+    "name": "Raid Leader's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shouts also Heal allies for 6.0%[x] of their Maximum Life per second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "raider-s-aspect-spi",
+    "name": "Raider's Aspect",
+    "class": "Spiritborn",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Heal for 15% Maximum Life when you Poison a Healthy enemy.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "raw-might-aspect-dru",
+    "name": "Raw Might Aspect",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Werebear Skill damage Stuns enemies for 3.0 seconds. Enemies can be Stunned this way every 5...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sadistic-aspect-war",
+    "name": "Sadistic Aspect",
+    "class": "Warlock",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When killing your Demons, you have a 50% chance for each to count as two kills.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "shifter-s-aspect-dru",
+    "name": "Shifter's Aspect",
+    "class": "Druid",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your form bonuses are increased by 80%[x].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "steadfast-berserker-s-aspect",
+    "name": "Steadfast Berserker's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 6.0% of your Maximum Life as Fortify whenever you deal direct damage while Berserking.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sticker-thought-aspect",
+    "name": "Sticker-thought Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 7,246 Thorns while Channeling and for 3 seconds afterwards.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "undying-aspect",
+    "name": "Undying Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Skill Heals you for 3.0% of your Maximum Life. Double this bonus while Injured.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "weapon-master-s-aspect-bar",
+    "name": "Weapon Master's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Weapon Mastery Skills Stun enemies for 1.5 seconds. Enemies can be Stunned this way once every 5 ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "wildbolt-aspect",
+    "name": "Wildbolt Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 1.5 seconds, Distant enemies are Pulled In to you and take 15%[x] increased damage from you...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "wyward-s-aspect",
+    "name": "Wyward's Aspect",
+    "class": "all",
+    "slots": [
+      "helm",
+      "chest",
+      "gloves",
+      "boots",
+      "offhand",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Lightning Damage has up to a 35% chance to Stun enemies for 1.5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-adaptability",
+    "name": "Aspect of Adaptability",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Basic Skills generate 25 additional Primary Resource, once per Skill.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-aftermath-rog",
+    "name": "Aspect of Aftermath",
+    "class": "Rogue",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting an Ultimate Skill generates 8.0 Energy per Skill Rank it has.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-akarat-s-blessing",
+    "name": "Aspect of Akarat's Blessing",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blocks have a 15% chance to reduce all Cooldowns by 1 second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-alacrity",
+    "name": "Aspect of Alacrity",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Defensive and Mobility Skills gain 75% Cooldown Rate while moving.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-authority-war",
+    "name": "Aspect of Authority",
+    "class": "Warlock",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 15[+] Maximum Dominance.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-berserk-fury-bar",
+    "name": "Aspect of Berserk Fury",
+    "class": "Barbarian",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 11.0 Fury per second while Berserking.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-contemplation-pal",
+    "name": "Aspect of Contemplation",
+    "class": "Paladin",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every time you consume Judgement, reduce one of your active Cooldowns by 0.20 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-dedication-pal",
+    "name": "Aspect of Dedication",
+    "class": "Paladin",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 25 Faith every 10 times you consume Judgement.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-deluge",
+    "name": "Aspect of Deluge",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Overpower stacks increase your Primary Maximum Resource by 8 and regeneration by 2.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-efficiency",
+    "name": "Aspect of Efficiency",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Cast Basic Skills have up to a 50.0% chance to make your next Core Skill cost no Prima...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-elemental-acuity-sor",
+    "name": "Aspect of Elemental Acuity",
+    "class": "Sorcerer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting a Pyromancy, Shock, or Frost Skill grants 9 Mana Regeneration for 4 seconds, once per Ele...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-elemental-attunement-sor",
+    "name": "Aspect of Elemental Attunement",
+    "class": "Sorcerer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 20% chance to reduce the Cooldown of one of your Defensive Skills by 10.0 seco...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-empowered-feathers-spi",
+    "name": "Aspect of Empowered Feathers",
+    "class": "Spiritborn",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Eagle Skills have up to a 32% chance to spawn a Storm Feather at your target. Each Sto...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-exhilaration-spi",
+    "name": "Aspect of Exhilaration",
+    "class": "Spiritborn",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Hitting an enemy has up to a 35% chance to reduce your Evade Cooldown by 5 seconds. Ea...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-furious-impulse-bar",
+    "name": "Aspect of Furious Impulse",
+    "class": "Barbarian",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each time you swap weapons, gain 11 Fury.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-giant-strides-bar",
+    "name": "Aspect of Giant Strides",
+    "class": "Barbarian",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Reduces the Cooldown of Leap by 3.5 seconds per enemy hit, up to a maximum of 7 seconds. Hitting ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-intricacy-spi",
+    "name": "Aspect of Intricacy",
+    "class": "Spiritborn",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Upon casting an Ultimate Skill, the last different Potency, Defensive, or Focus Skill you Cast pr...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-pilgrim-s-progress-pal",
+    "name": "Aspect of Pilgrim's Progress",
+    "class": "Paladin",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Disciple Skills with Cooldowns generate up to 60 Faith based on how far your travel with them.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-potent-blood-nec",
+    "name": "Aspect of Potent Blood",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Orbs grant 30 Essence.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-rapid-ossification-nec",
+    "name": "Aspect of Rapid Ossification",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 100 Essence you spend reduces the cooldowns of your Bone Skills by 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-refutation-sor",
+    "name": "Aspect of Refutation",
+    "class": "Sorcerer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Defensive Skills gain additional 2 charges.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-ritual-synthesis-war",
+    "name": "Aspect of Ritual Synthesis",
+    "class": "Warlock",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting Hellfire Skills grants Occult Skills 50% Cooldown Reduction for 3 seconds. Casting Abyss ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-synergy-rog",
+    "name": "Aspect of Synergy",
+    "class": "Rogue",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Using an Agility Skill reduces the Cooldown of a random Subterfuge Skill by 7.5 seconds, and vice...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-calm-breeze-dru",
+    "name": "Aspect of the Calm Breeze",
+    "class": "Druid",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Wind Shear now deals 345 Poisoning damage over 4 seconds.Lucky Hit: Wind Shear has up to a 14.0% ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-dark-dance",
+    "name": "Aspect of the Dark Dance",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 5 seconds, your next Core Skill costs [102 - 25] Life instead of Primary Resource. Will onl...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-long-shadow-nec",
+    "name": "Aspect of the Long Shadow",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Your Corrupting effects have a 80.0% chance to generate 3 Essence.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-orange-herald",
+    "name": "Aspect of the Orange Herald",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Cast Core Skill damage reduces the Cooldown of one of your Skills by 1.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-relentless-armsmaster-bar",
+    "name": "Aspect of the Relentless Armsmaster",
+    "class": "Barbarian",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 75.0%[x] increased Fury Generation and 15% reduced Fury cost while all damage bonuses from t...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-umbral",
+    "name": "Aspect of the Umbral",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Incapacitating enemies generates 6.0 Primary Resource.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-unsatiated-dru",
+    "name": "Aspect of the Unsatiated",
+    "class": "Druid",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After Critically Striking an enemy with Shred, you gain 15 Spirit. While at 100 Spirit, your Were...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-wildrage-dru",
+    "name": "Aspect of the Wildrage",
+    "class": "Druid",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Companion Skill Cooldowns are reduced by 7.5 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-torment-nec",
+    "name": "Aspect of Torment",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Critical Strikes with Bone Skills increase your Essence Regeneration by 500.0%[x] for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-vocalized-empowerment",
+    "name": "Aspect of Vocalized Empowerment",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shout Skills grant you 15.0 Primary Resource Regeneration while active.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-voracious-rage",
+    "name": "Aspect of Voracious Rage",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Killing an enemy with a Core Skill refunds 30.0% of its base cost. Can only happen once per Skill...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "balanced-aspect-dru",
+    "name": "Balanced Aspect",
+    "class": "Druid",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Maximum Spirit is increased by 50. Casting a Skill with a Cooldown increases Spirit Generati...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bear-clan-berserker-s-aspect-bar",
+    "name": "Bear Clan Berserker's Aspect",
+    "class": "Barbarian",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Kills while Berserking increases the Cooldown Rate of your Brawling Skills by 75% for 2 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "bold-chieftain-s-aspect",
+    "name": "Bold Chieftain's Aspect",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Shout Skill Cooldowns are reduced by 10.0 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "energizing-aspect-rog",
+    "name": "Energizing Aspect",
+    "class": "Rogue",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Damaging an enemy with a Basic Skill generates 6 Energy. Gain [10.0 - 30.0] Energy after killing ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "fastblood-aspect-nec",
+    "name": "Fastblood Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Orbs reduce your Ultimate Cooldown by 3.00 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "galvanized-slasher-s-aspect-rog",
+    "name": "Galvanized Slasher's  Aspect",
+    "class": "Rogue",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Damaging an enemy with a Mobility Skill has up to a 45% chance to restore 50 Energy. Y...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "mangled-aspect-dru",
+    "name": "Mangled Aspect",
+    "class": "Druid",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While in Werebear form, you gain [4.0 - 12.0]% Maximum Spirit Generation per second.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "prodigy-s-aspect-sor",
+    "name": "Prodigy's Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Using a Cooldown grants you 30 Mana Regeneration for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ravenous-aspect-rog",
+    "name": "Ravenous Aspect",
+    "class": "Rogue",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Killing a Vulnerable or Weakened enemy grants you 115.0%[x] increased Energy Regeneration for 4 s...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "recharging-aspect-sor",
+    "name": "Recharging Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Absorbing Crackling Energy grants you 6.0 Mana Regeneration for 2 seconds, stacking up to 5 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "requiem-aspect-nec",
+    "name": "Requiem Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 10.0 Maximum Essence per active Minion.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sapping-aspect",
+    "name": "Sapping Aspect",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 1.5 Primary Resource per second for each Nearby enemy affected by your Damage Over Time effe...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "starlight-aspect",
+    "name": "Starlight Aspect",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 10% of your Life that you Heal grants you 30% Primary Resource Cost Reduction for 2 seconds...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "vulpine-s-aspect",
+    "name": "Vulpine's Aspect",
+    "class": "all",
+    "slots": [
+      "ring",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 25 Primary Resource per second while you have a Barrier.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "agile-aspect-rog",
+    "name": "Agile Aspect",
+    "class": "Rogue",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Casting an Agility Skill increases your Movement Speed by 30%[x] and your Dodge Chance by 10% for...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-creeping-cadaver-nec",
+    "name": "Aspect of Creeping Cadaver",
+    "class": "Necromancer",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every 20 meters traveled triggers a random equipped Corpse Skill. Consuming a Corpse increases yo...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-forward-momentum",
+    "name": "Aspect of Forward Momentum",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Your Knock Back and Pull effects grant you 35%[x] Movement Speed for 4 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-haste-spi",
+    "name": "Aspect of Haste",
+    "class": "Spiritborn",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Every second while moving gain 30%[+] Bonus Movement Speed for 1.5 seconds, up to 90%[+].",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-holy-cadence-pal",
+    "name": "Aspect of Holy Cadence",
+    "class": "Paladin",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "When Judgement detonates you gain 35.0%[x] increased Movement Speed for 8 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-impetus-war",
+    "name": "Aspect of Impetus",
+    "class": "Warlock",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 50%[+] increased Movement Speed while Close to your Demons.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-metamorphosis",
+    "name": "Aspect of Metamorphosis",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Evade transforms you into a cloud of bats, dealing 300 Physical damage and inflicting Vampiric Cu...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-momentum-spi",
+    "name": "Aspect of Momentum",
+    "class": "Spiritborn",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "After you Evade, your next Core Skill dashes to your target and increases your Movement Speed by ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-nebulous-brews",
+    "name": "Aspect of Nebulous Brews",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Healing Potions grant 30%[x] Movement Speed for 8 seconds. Every 80 meters you travel refills a H...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-perpetual-stomping-bar",
+    "name": "Aspect of Perpetual Stomping",
+    "class": "Barbarian",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Damaging an enemy with Kick or Ground Stomp resets Leap's Cooldown.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-sky-power-spi",
+    "name": "Aspect of Sky Power",
+    "class": "Spiritborn",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Lucky Hit: Up to a 25%[+] chance to create a Mystic Circle for 10 seconds. Casting a Eagle Skill ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-slaughter",
+    "name": "Aspect of Slaughter",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 45.0%[+] increased Movement Speed. Taking damage from Close enemies Slows you by 30% for...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-swift-spirit",
+    "name": "Aspect of Swift Spirit",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Losing Resolve grants 5.0%[x] Movement Speed for 10 seconds, stacking up to 5 times.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-tenuous-agility-sor",
+    "name": "Aspect of Tenuous Agility",
+    "class": "Sorcerer",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain 80.0%[+] Movement Speed. This bonus is removed for 10 seconds after you Cast any Defensive S...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-arbiter-s-zephyr-pal",
+    "name": "Aspect of the Arbiter's Zephyr",
+    "class": "Paladin",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Arbiter's evade cooldown is reduced by 3.0 Seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "aspect-of-the-unholy-confederate",
+    "name": "Aspect of the Unholy Confederate",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "You gain 1.5%[+] increased Movement Speed per active Summon. Casting a Summon Skill doubles this ...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "blood-soaked-aspect-nec",
+    "name": "Blood-soaked Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Blood Mist leaves a trail of Desecrated Ground that lasts for 8 seconds and deals [53 - 83] Corru...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "charged-aspect-sor",
+    "name": "Charged Aspect",
+    "class": "Sorcerer",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Collecting Crackling Energy increases your Movement Speed by 30%[+] for 8 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "craven-aspect",
+    "name": "Craven Aspect",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Each Nearby Hindered enemy grants you 1.5%[+] increased Movement Speed.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "ghostwalker-aspect",
+    "name": "Ghostwalker Aspect",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While Unstoppable and for 4 seconds after, you gain 20.0%[x] increased Movement Speed and are Unh...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "methodical-aspect-war",
+    "name": "Methodical Aspect",
+    "class": "Warlock",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Standing still reduces the Cooldown of Mobility Skills by 14.0% per second. After 5 seconds, they...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "shadow-soaked-aspect-nec",
+    "name": "Shadow-Soaked Aspect",
+    "class": "Necromancer",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "While standing in Desecrated Ground and for 6 seconds after leaving it you gain 40%[+] Movement S...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "sickfoot-s-aspect",
+    "name": "Sickfoot's Aspect",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Gain up to 1.5%[+] increased Movement and Damage over Time Speed for each Nearby enemy affected b...",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  },
+  {
+    "id": "wind-striker-aspect",
+    "name": "Wind Striker Aspect",
+    "class": "all",
+    "slots": [
+      "boots",
+      "amulet"
+    ],
+    "codex": false,
+    "effect": "Critical Strikes grant 50.0%[+] Movement Speed for 1 second, up to 6 seconds.",
+    "source": "Salvage Legendary drops (drop-driven since Lord of Hatred — no dungeon guarantee)"
+  }
+]
