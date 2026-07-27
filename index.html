@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nephalem's Codex — D4 Build Gear Planner</title>
+  <title>Nephalem's Codex — D4 Build Planner</title>
   <meta name="description" content="Diablo 4 build gear acquisition planner and Horadric Cube crafting simulator." />
   <link rel="canonical" href="https://alltrueist.github.io/nephalimscodex/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,56 +20,71 @@
       <div class="header-logo">📜</div>
       <div class="header-title">
         <h1>Nephalem's Codex</h1>
-        <p>Diablo 4 Build Gear Acquisition Planner</p>
+        <p>Diablo 4 Build Planner &amp; Crafting Simulator</p>
       </div>
     </div>
     <div class="header-meta">
-      <div><span class="season-tag">Season 14</span> Death Awakening</div>
-      <div>Lord of Hatred Expansion</div>
+      <div><span class="season-tag">S14</span> Death Awakening</div>
       <div class="header-live-link">
-        🔗 <a href="https://alltrueist.github.io/nephalimscodex/" target="_blank" rel="noopener">alltrueist.github.io/nephalimscodex</a>
+        <a href="https://alltrueist.github.io/nephalimscodex/" target="_blank" rel="noopener">alltrueist.github.io/nephalimscodex</a>
       </div>
     </div>
   </header>
 
-  <!-- ── MAIN LAYOUT ── -->
-  <div class="main-container">
+  <!-- ── BODY ── -->
+  <div class="app-body">
 
-    <!-- ── LEFT PANEL ── -->
-    <div class="left-panel">
+    <!-- ══════════════════════════════════════════════════════
+         PANEL 1 — BUILD & GEAR (left column on desktop, Tab 1 on mobile)
+         ══════════════════════════════════════════════════════ -->
+    <div class="panel-build" id="panel-build">
 
-      <!-- Build Setup -->
+      <!-- Build Info / Class Selector -->
       <div class="build-setup">
-        <div class="section-title">⚔️ Build Info</div>
         <div class="setup-row">
-          <div class="input-group">
+          <div class="input-group flex-grow">
             <label for="build-name">Build Name</label>
             <input type="text" id="build-name" placeholder="e.g. Whirlwind Barbarian" />
           </div>
-          <div class="input-group" style="flex:0 0 148px;">
-            <label for="build-class">Class <span class="filter-hint">(filters items)</span></label>
-            <select id="build-class"></select>
+          <div class="input-group class-group">
+            <label for="build-class">
+              Class <span class="required-star">★ Required</span>
+            </label>
+            <select id="build-class">
+              <option value="">Select class...</option>
+            </select>
           </div>
         </div>
       </div>
 
       <!-- Gear Slots -->
-      <div class="gear-section">
-        <div class="section-title">🛡️ Gear Slots
-          <span style="font-weight:400;color:var(--text-dim);font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-size:10px;">— click to add/edit</span>
+      <div class="gear-section" id="gear-section">
+        <!-- Class Gate Overlay -->
+        <div class="class-gate" id="class-gate">
+          <div class="class-gate-inner">
+            <div class="class-gate-icon">⚔️</div>
+            <div class="class-gate-title">Select Your Class</div>
+            <div class="class-gate-desc">Your class determines which items, aspects, and affixes are available for your build.</div>
+          </div>
+        </div>
+        <!-- Slots -->
+        <div class="section-title-bar">
+          🛡️ Gear Slots
+          <span class="section-hint">click to add or edit</span>
         </div>
         <div class="gear-grid" id="gear-grid"></div>
       </div>
 
-      <!-- Item Edit Panel -->
+      <!-- ── EDIT PANEL (slides up at bottom of left panel) ── -->
       <div class="edit-panel" id="edit-panel">
         <div class="edit-panel-header">
           <h3 id="edit-slot-label">Edit Slot</h3>
           <button class="btn-icon" id="btn-close-panel" title="Close">✕</button>
         </div>
+
         <div class="edit-panel-body">
 
-          <!-- Item Type Tabs -->
+          <!-- Item Type Selector -->
           <div class="field-group">
             <div class="field-label">Item Type</div>
             <div class="type-tabs">
@@ -79,87 +94,95 @@
             </div>
           </div>
 
-          <!-- Item Name + Quick Pick -->
-          <div class="field-group">
-            <label class="field-label" for="edit-item-name">Item Name</label>
-            <input type="text" id="edit-item-name" list="item-names-list"
-              placeholder="Type name or use Quick Pick below" autocomplete="off" />
-            <datalist id="item-names-list"></datalist>
-            <div class="db-match-banner" id="db-match-banner"></div>
-          </div>
-
-          <!-- Quick Pick Browser -->
-          <div class="field-group" id="quick-pick-group">
-            <div class="field-label" style="display:flex;align-items:center;gap:6px;">
-              Quick Pick
-              <span id="qp-count" style="font-weight:400;color:var(--text-dim);font-size:10px;"></span>
+          <!-- ── UNIQUE / MYTHIC VIEW ── -->
+          <div id="view-unique">
+            <!-- Selected item display -->
+            <div class="selected-display" id="selected-display">
+              <span class="sd-label">Selected:</span>
+              <span class="sd-name" id="sd-name">None — click an item below</span>
+              <span class="sd-badge" id="sd-badge"></span>
             </div>
-            <div id="quick-pick-list" class="quick-pick-list"></div>
+            <!-- Quick Pick -->
+            <div class="field-group">
+              <div class="field-label" style="display:flex;align-items:center;gap:6px;">
+                Quick Pick <span id="qp-count" style="font-weight:400;color:var(--text-dim);font-size:10px;"></span>
+              </div>
+              <div id="quick-pick-list" class="quick-pick-list"></div>
+            </div>
+            <!-- Notes -->
+            <div class="field-group">
+              <label class="field-label" for="edit-notes-unique">Notes</label>
+              <textarea id="edit-notes-unique" rows="2" placeholder="Any extra notes..."></textarea>
+            </div>
           </div>
 
-          <!-- Legendary Fields -->
-          <div id="legendary-fields">
+          <!-- ── LEGENDARY VIEW ── -->
+          <div id="view-legendary" style="display:none;">
+            <!-- Aspect (becomes the item name) -->
             <div class="field-group">
-              <label class="field-label" for="edit-aspect">Legendary Aspect</label>
+              <label class="field-label" for="edit-aspect">
+                Legendary Aspect <span class="required-star">★</span>
+              </label>
               <input type="text" id="edit-aspect" list="aspect-names-list"
-                placeholder="e.g. Aspect of the Protector" autocomplete="off" />
+                placeholder="Start typing — filtered to your class &amp; slot" autocomplete="off" />
               <datalist id="aspect-names-list"></datalist>
-              <div class="field-hint">Enter exactly as in your build guide.</div>
+              <div class="field-hint">This becomes the item's name in your build guide.</div>
             </div>
+            <!-- Tempers -->
             <div class="field-group">
-              <label class="field-label" for="edit-affixes">Required Affixes</label>
-              <input type="text" id="edit-affixes"
-                placeholder="e.g. Critical Strike Damage, Attack Speed, Life" />
-              <div class="field-hint">Comma-separated. Copy from your build guide's gear section.</div>
-            </div>
-            <div class="field-group">
-              <label class="field-label" for="edit-tempers">Tempers</label>
+              <label class="field-label" for="edit-tempers">
+                Tempers <span class="field-optional">(from build guide)</span>
+              </label>
               <input type="text" id="edit-tempers"
-                placeholder="e.g. Weapon Mastery, Core Skill Damage" />
-              <div class="field-hint">Comma-separated. List both temper slots from your guide.</div>
+                placeholder="e.g. Weapon Mastery: Stab, Core: Damage" />
+              <div class="field-hint">2 temper slots max. Check your build guide for options. Comma-separate both.</div>
             </div>
+            <!-- MW Priority -->
             <div class="field-group">
-              <label class="field-label" for="edit-mw-priority">Masterwork Priority</label>
+              <label class="field-label" for="edit-mw-priority">
+                Masterwork Priority <span class="field-optional">(from build guide)</span>
+              </label>
               <input type="text" id="edit-mw-priority"
-                placeholder="e.g. Critical Strike Damage > Attack Speed" />
-              <div class="field-hint">Which stat to amplify at MW ranks 4, 8, 12.</div>
+                placeholder="e.g. Critical Strike Damage &gt; Attack Speed" />
+              <div class="field-hint">Which stat to amplify at MW ranks 4, 8, and 12.</div>
             </div>
-
-            <!-- Plan This Craft button (only for Legendary) -->
-            <div class="field-group" id="plan-craft-group">
-              <button class="btn btn-plan-craft" onclick="CraftSim.prefillFromSlot(STATE.activeSlot)">
+            <!-- Notes -->
+            <div class="field-group">
+              <label class="field-label" for="edit-notes-leg">Notes</label>
+              <textarea id="edit-notes-leg" rows="2" placeholder="Any extra notes..."></textarea>
+            </div>
+            <!-- Plan Craft shortcut -->
+            <div class="field-group">
+              <button class="btn-plan-craft" id="btn-plan-craft">
                 🟫 Plan This Craft in the Simulator →
               </button>
             </div>
           </div>
 
-          <!-- Notes -->
-          <div class="field-group">
-            <label class="field-label" for="edit-notes">Notes</label>
-            <textarea id="edit-notes" rows="2"
-              placeholder="Any extra notes about this item..."></textarea>
-          </div>
+        </div><!-- /edit-panel-body -->
 
-        </div>
         <div class="edit-panel-actions">
           <button class="btn btn-primary" id="btn-save-item">Save Item</button>
           <button class="btn btn-danger btn-sm" id="btn-delete-item">Remove</button>
         </div>
-      </div>
+      </div><!-- /edit-panel -->
 
-    </div><!-- /left-panel -->
+    </div><!-- /panel-build -->
 
-    <!-- ── RIGHT PANEL ── -->
-    <div class="right-panel">
 
-      <!-- Tab bar -->
-      <div class="right-tabs">
-        <button class="right-tab active" id="tab-guide"    onclick="switchTab('guide')">📋 Acquisition Guide</button>
-        <button class="right-tab"        id="tab-crafting" onclick="switchTab('crafting')">🟫 Crafting Simulator</button>
+    <!-- ══════════════════════════════════════════════════════
+         PANEL RIGHT — Guide + Craft (right column on desktop, Tabs 2&3 on mobile)
+         ══════════════════════════════════════════════════════ -->
+    <div class="panel-right" id="panel-right">
+
+      <!-- Sub-tab bar (visible on desktop and mobile-right view) -->
+      <div class="right-tab-bar">
+        <button class="right-tab active" id="rtab-guide" onclick="switchRightTab('guide')">📋 Acquisition Guide</button>
+        <button class="right-tab"        id="rtab-craft" onclick="switchRightTab('craft')">🟫 Crafting Simulator</button>
       </div>
 
       <!-- ── TAB: Acquisition Guide ── -->
-      <div id="panel-guide" class="tab-panel">
+      <div id="panel-guide" class="right-panel-content">
         <div class="guide-header">
           <div>
             <div class="guide-title">📋 Acquisition Guide</div>
@@ -174,7 +197,7 @@
       </div>
 
       <!-- ── TAB: Crafting Simulator ── -->
-      <div id="panel-crafting" class="tab-panel" style="display:none;">
+      <div id="panel-craft" class="right-panel-content" style="display:none;">
         <div class="guide-header">
           <div>
             <div class="guide-title">🟫 Crafting Simulator</div>
@@ -183,21 +206,20 @@
           <button class="btn btn-secondary btn-sm" id="cs-clear">🗑️ Clear</button>
         </div>
 
-        <!-- Controls -->
+        <!-- Class status (auto-synced — no separate selector) -->
+        <div id="cs-class-status" class="cs-class-status"></div>
+
+        <!-- Slot selector -->
         <div class="cs-controls">
           <div class="input-group">
             <label class="field-label" for="cs-slot">Item Slot</label>
             <select id="cs-slot"></select>
           </div>
-          <div class="input-group">
-            <label class="field-label" for="cs-class">Class <span class="filter-hint">(filters affixes)</span></label>
-            <select id="cs-class"></select>
-          </div>
         </div>
 
         <!-- Selected affixes bar -->
         <div class="cs-selected-section">
-          <div class="cs-section-label">Selected Affixes (0/4)</div>
+          <div class="cs-section-label selected-label">Selected Affixes (0/4)</div>
           <div id="cs-selected-bar" class="cs-selected-bar">
             <span class="cs-selected-empty">Click affixes below to add them (max 4)</span>
           </div>
@@ -206,7 +228,6 @@
         <!-- Legend -->
         <div class="cs-legend">
           <span class="cs-legend-item"><span class="cs-flex-star">★</span> = available from multiple prisms (flexible)</span>
-          <span class="cs-legend-item"><span style="background:rgba(200,147,42,0.25);border:1px solid var(--gold);padding:1px 5px;border-radius:3px;font-size:10px;">Selected</span> = already in your plan</span>
         </div>
 
         <!-- Affix picker -->
@@ -214,92 +235,49 @@
           <div class="cs-placeholder">Select a slot above to see available affixes.</div>
         </div>
 
-        <!-- Crafting Plan output -->
+        <!-- Plan output -->
         <div class="cs-plan-section">
-          <div class="cs-section-label">📋 Crafting Plan</div>
+          <div class="cs-section-label">📋 Your Crafting Plan</div>
           <div id="cs-plan-output" class="cs-plan-output">
             <div class="cs-plan-empty">
-              <div style="font-size:40px;margin-bottom:12px;">🟫</div>
-              <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--text-muted);margin-bottom:8px;">Select up to 4 affixes above</div>
-              <div style="font-size:12px;color:var(--text-dim);max-width:280px;line-height:1.6;">
-                Your step-by-step Horadric Cube crafting plan will appear here, including when to use the Enchanter to lock stats.
-              </div>
+              <div style="font-size:36px;margin-bottom:10px;">🟫</div>
+              <div style="font-family:'Cinzel',serif;font-size:13px;color:var(--text-muted);margin-bottom:6px;">Select a slot and up to 4 affixes</div>
+              <div style="font-size:11px;color:var(--text-dim);max-width:280px;line-height:1.6;text-align:center;">Your step-by-step Horadric Cube rolling plan will appear here, including when to use the Enchanter's single stat lock.</div>
             </div>
           </div>
         </div>
-      </div>
 
-    </div><!-- /right-panel -->
+      </div><!-- /panel-craft -->
 
-  </div><!-- /main-container -->
+    </div><!-- /panel-right -->
+
+  </div><!-- /app-body -->
+
+  <!-- ══════════════════════════════════════════════════════
+       MOBILE BOTTOM TAB NAV (hidden on desktop)
+       ══════════════════════════════════════════════════════ -->
+  <nav class="mobile-tab-nav" id="mobile-tab-nav">
+    <button class="mob-tab active" id="mobtab-build" onclick="setMobileTab('build')">
+      <span class="mob-tab-icon">🛡️</span>
+      <span class="mob-tab-label">Gear</span>
+    </button>
+    <button class="mob-tab" id="mobtab-guide" onclick="setMobileTab('guide')">
+      <span class="mob-tab-icon">📋</span>
+      <span class="mob-tab-label">Guide</span>
+    </button>
+    <button class="mob-tab" id="mobtab-craft" onclick="setMobileTab('craft')">
+      <span class="mob-tab-icon">🟫</span>
+      <span class="mob-tab-label">Craft</span>
+    </button>
+  </nav>
+
 </div><!-- /app -->
 
-<!-- ── FIRST-VISIT OVERLAY ── -->
-<div id="howto-overlay" style="
-  display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,0.88);z-index:9998;
-  align-items:center;justify-content:center;">
-  <div style="background:#151528;border:1px solid #6b4e15;border-radius:12px;
-    max-width:600px;width:90%;padding:32px;box-shadow:0 8px 60px rgba(0,0,0,0.8);">
-    <h2 style="font-family:'Cinzel',serif;color:#f0be60;margin-bottom:16px;">📜 How to Use Nephalem's Codex</h2>
-    <ol style="font-size:13px;line-height:2.2;color:#e8e4d0;padding-left:20px;">
-      <li>Set your <strong style="color:#c8932a">Build Name</strong> and <strong style="color:#c8932a">Class</strong> — filters all items and aspects to your class</li>
-      <li>Click any <strong style="color:#c8932a">Gear Slot</strong> to add items from your build guide:<br>
-        <span style="color:#8a8478;font-size:11px;">— Quick Pick filters items to your class • Uniques auto-fill boss sources • Legendaries take aspect + affixes + tempers + MW priority</span>
-      </li>
-      <li>The <strong style="color:#c8932a">📋 Acquisition Guide</strong> tab shows boss farm targets, Cube recipes, aspects, and step-by-step crafting plans</li>
-      <li>The <strong style="color:#c8932a">🟫 Crafting Simulator</strong> tab walks you through the optimal Horadric Cube rolling order for any set of 4 affixes — including when to use the Enchanter to lock stats</li>
-      <li>From any Legendary slot, hit <strong style="color:#c8932a">🟫 Plan This Craft</strong> to jump straight to the simulator pre-filled</li>
-    </ol>
-    <div style="margin-top:14px;padding:10px;background:rgba(200,147,42,0.1);border-radius:6px;font-size:11px;color:#8a8478;">
-      💾 Auto-saves in your browser. &nbsp;🔄 Aspects DB auto-updates weekly via GitHub Actions.<br>
-      🔗 Live: <a href="https://alltrueist.github.io/nephalimscodex/" style="color:#c8932a;">alltrueist.github.io/nephalimscodex</a>
-    </div>
-    <button onclick="closeHowTo()" style="
-      margin-top:20px;width:100%;padding:12px;
-      background:linear-gradient(135deg,#6b4e15,#c8932a);
-      border:none;border-radius:6px;color:#07070f;
-      font-family:'Cinzel',serif;font-size:13px;font-weight:700;
-      cursor:pointer;letter-spacing:0.05em;">
-      Begin Your Journey →
-    </button>
-  </div>
-</div>
-
-<script>
-  if (!localStorage.getItem('d4_howto_seen')) {
-    document.getElementById('howto-overlay').style.display = 'flex';
-  }
-  function closeHowTo() {
-    localStorage.setItem('d4_howto_seen', '1');
-    document.getElementById('howto-overlay').style.display = 'none';
-  }
-  function switchTab(tab) {
-    document.getElementById('panel-guide').style.display    = tab === 'guide'    ? 'block' : 'none';
-    document.getElementById('panel-crafting').style.display = tab === 'crafting' ? 'block' : 'none';
-    document.getElementById('tab-guide').classList.toggle('active',    tab === 'guide');
-    document.getElementById('tab-crafting').classList.toggle('active', tab === 'crafting');
-    if (tab === 'crafting') {
-      CraftSim.slot = CraftSim.slot || null;
-      CraftSim.cls  = STATE.buildClass || null;
-      CraftSim.renderSlotSelector();
-      CraftSim.renderClassSelector();
-    }
-  }
-</script>
-
-<!-- Load order: items-db → aspects-db → crafting-db → app logic → crafting logic -->
+<!-- Load order: items-db → aspects-db → crafting-db → app → crafting -->
 <script src="data/items-db.js"></script>
 <script src="data/aspects-db.js"></script>
 <script src="data/crafting-db.js"></script>
 <script src="app.js"></script>
 <script src="crafting.js"></script>
-<script>
-  // Initialize crafting simulator after DOM and data are ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // CraftSim.init() is called when the user first opens the crafting tab
-    // (prevents duplicate selector rendering since app.js already ran)
-  });
-</script>
 </body>
 </html>
