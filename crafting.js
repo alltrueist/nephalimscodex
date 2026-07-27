@@ -2,23 +2,31 @@
 // NEPHALEM'S CODEX — Crafting Simulator Logic
 // Horadric Cube step-by-step crafting planner
 // ============================================================
+// KEY MECHANIC (corrected):
+//   Focus Reroll with a Tuning Prism RANDOMLY picks which affix
+//   of that prism's category to change. You do NOT choose the slot.
+//   Only ONE affix can be locked at a time (via the Enchanter).
+//   This means:
+//     2 same-prism stats → lock one, fish freely for the second (easy)
+//     3 same-prism stats → lock one, 50/50 chance reroll hits what you want (hard)
+//     4 same-prism stats → lock one, 33% chance of hitting target (luck-based)
+// ============================================================
 
 const CraftSim = {
-  // Active state
-  slot:     null,   // app slot ID (e.g., "weapon", "helm")
-  cls:      null,   // class name
-  picks:    [],     // array of affix IDs (max 4)
-  plan:     null,   // last generated plan
+  slot:     null,
+  cls:      null,
+  picks:    [],
+  plan:     null,
 
-  // ── INIT ───────────────────────────────────────────────────
   init() {
-    this.slot = null;
-    this.cls  = STATE.buildClass || null;
+    this.slot  = null;
+    this.cls   = STATE.buildClass || null;
     this.picks = [];
     this.plan  = null;
     this.renderSlotSelector();
     this.renderClassSelector();
     this.renderAfixPicker();
+    this.renderSelected();
     this.renderPlan();
     this.attachListeners();
   },
@@ -27,16 +35,33 @@ const CraftSim = {
     const slotSel  = document.getElementById('cs-slot');
     const clsSel   = document.getElementById('cs-class');
     const clearBtn = document.getElementById('cs-clear');
-    if (slotSel)  slotSel.addEventListener('change',  () => { this.slot = slotSel.value;  this.picks = []; this.renderAfixPicker(); this.renderSelected(); this.renderPlan(); });
-    if (clsSel)   clsSel.addEventListener('change',   () => { this.cls  = clsSel.value;  this.picks = []; this.renderAfixPicker(); this.renderSelected(); this.renderPlan(); });
-    if (clearBtn) clearBtn.addEventListener('click',  () => { this.picks = []; this.plan = null; this.renderSelected(); this.renderAfixPicker(); this.renderPlan(); });
+    if (slotSel)  slotSel.addEventListener('change',  () => {
+      this.slot  = slotSel.value;
+      this.picks = [];
+      this.renderAfixPicker();
+      this.renderSelected();
+      this.renderPlan();
+    });
+    if (clsSel)   clsSel.addEventListener('change',   () => {
+      this.cls   = clsSel.value;
+      this.picks = [];
+      this.renderAfixPicker();
+      this.renderSelected();
+      this.renderPlan();
+    });
+    if (clearBtn) clearBtn.addEventListener('click',  () => {
+      this.picks = [];
+      this.plan  = null;
+      this.renderSelected();
+      this.renderAfixPicker();
+      this.renderPlan();
+    });
   },
 
   // ── SELECTORS ──────────────────────────────────────────────
   renderSlotSelector() {
     const sel = document.getElementById('cs-slot');
     if (!sel) return;
-    // Build from the app's current slot list
     const slots = getGearSlots();
     sel.innerHTML = '<option value="">Choose a slot...</option>';
     slots.forEach(s => {
@@ -61,18 +86,27 @@ const CraftSim = {
     });
   },
 
-  // ── AFFIX PICKER ───────────────────────────────────────────
+  // ── AFFIX FILTERING ────────────────────────────────────────
   getAvailableAffixes() {
     if (!this.slot) return [];
     return CRAFTING_DB.affixes.filter(a => {
-      // Slot check
       if (!a.slots.includes(this.slot)) return false;
-      // Class check
       if (this.cls && a.class !== 'all' && a.class !== this.cls) return false;
       return true;
     });
   },
 
+  getPoolForPrism(prismId) {
+    if (!this.slot) return [];
+    return CRAFTING_DB.affixes.filter(a => {
+      if (!a.prisms.includes(prismId)) return false;
+      if (!a.slots.includes(this.slot)) return false;
+      if (this.cls && a.class !== 'all' && a.class !== this.cls) return false;
+      return true;
+    });
+  },
+
+  // ── AFFIX PICKER ───────────────────────────────────────────
   renderAfixPicker() {
     const container = document.getElementById('cs-affix-picker');
     if (!container) return;
@@ -88,50 +122,47 @@ const CraftSim = {
       return;
     }
 
-    // Group by first (primary) prism
     const groups = {};
     available.forEach(a => {
-      const primaryPrism = a.prisms[0];
-      if (!groups[primaryPrism]) groups[primaryPrism] = [];
-      groups[primaryPrism].push(a);
+      const key = a.prisms[0];
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(a);
     });
 
-    // Order: aggressive, adept, protector, resourceful, pragmatic, chromatic, none
     const prismOrder = ['aggressive','adept','protector','resourceful','pragmatic','chromatic','none'];
-
     let html = '';
     prismOrder.forEach(prismId => {
       if (!groups[prismId] || !groups[prismId].length) return;
       const prism = CRAFTING_DB.prisms[prismId];
+      // Count how many from this group are already picked
+      const pickedFromGroup = groups[prismId].filter(a => this.picks.includes(a.id)).length;
+      const conflictWarning = pickedFromGroup >= 2
+        ? `<span class="cs-group-warning">⚠️ ${pickedFromGroup} from same prism — conflicts!</span>` : '';
       html += `<div class="cs-prism-group">
         <div class="cs-prism-header" style="background:${prism.bg};border-color:${prism.border};">
           <span class="cs-prism-icon">${prism.icon}</span>
           <span class="cs-prism-name">${prism.name}</span>
           <span class="cs-prism-category">${prism.category}</span>
+          ${conflictWarning}
         </div>
         <div class="cs-affix-pills">`;
       groups[prismId].forEach(a => {
         const isPicked   = this.picks.includes(a.id);
         const isFull     = this.picks.length >= 4 && !isPicked;
         const isFlexible = a.prisms.length > 1;
-        const disabledCls = isFull ? ' cs-pill-disabled' : '';
-        const pickedCls   = isPicked ? ' cs-pill-picked' : '';
-        const flexCls     = isFlexible ? ' cs-pill-flexible' : '';
         html += `<button
-          class="cs-affix-pill${pickedCls}${disabledCls}${flexCls}"
+          class="cs-affix-pill${isPicked ? ' cs-pill-picked' : ''}${isFull ? ' cs-pill-disabled' : ''}${isFlexible ? ' cs-pill-flexible' : ''}"
           onclick="CraftSim.toggleAffix('${a.id}')"
-          title="${a.note || a.name}${isFlexible ? ' ★ Flexible: also available from ' + a.prisms.slice(1).map(p => CRAFTING_DB.prisms[p].short).join('/') : ''}"
+          title="${a.note ? a.note + ' ' : ''}${isFlexible ? '★ Also available from: ' + a.prisms.slice(1).map(p => CRAFTING_DB.prisms[p].short).join('/') : ''}"
           ${isFull && !isPicked ? 'disabled' : ''}>
           ${isPicked ? '✅ ' : ''}${a.name}${isFlexible ? ' <span class="cs-flex-star">★</span>' : ''}
         </button>`;
       });
       html += `</div></div>`;
     });
-
     container.innerHTML = html;
   },
 
-  // ── PICKS ──────────────────────────────────────────────────
   toggleAffix(affixId) {
     const idx = this.picks.indexOf(affixId);
     if (idx >= 0) {
@@ -139,7 +170,7 @@ const CraftSim = {
     } else if (this.picks.length < 4) {
       this.picks.push(affixId);
     } else {
-      showToast('⚠️ You already have 4 affixes selected. Remove one first.');
+      showToast('⚠️ Already have 4 affixes selected. Remove one first.');
       return;
     }
     this.renderAfixPicker();
@@ -148,7 +179,9 @@ const CraftSim = {
   },
 
   renderSelected() {
-    const bar = document.getElementById('cs-selected-bar');
+    const bar    = document.getElementById('cs-selected-bar');
+    const label  = document.querySelector('.cs-selected-label');
+    if (label) label.textContent = `Selected Affixes (${this.picks.length}/4)`;
     if (!bar) return;
     if (!this.picks.length) {
       bar.innerHTML = `<span class="cs-selected-empty">Click affixes below to add them (max 4)</span>`;
@@ -165,153 +198,195 @@ const CraftSim = {
     }).join('');
   },
 
-  // ── CRAFTING PLAN ENGINE ───────────────────────────────────
+  // ── PLAN ENGINE ────────────────────────────────────────────
+  // !! CORRECTED MECHANIC !!
+  // Focus Reroll randomly picks WHICH affix of the prism type gets changed.
+  // You can only lock ONE affix at a time (via the Enchanter).
+  // Strategy: assign flexible affixes to minimize prism conflicts.
+  // Then build steps with honest difficulty ratings.
   generatePlan() {
     if (!this.picks.length) return null;
 
-    // 1. Gather affix objects for each pick
     const desired = this.picks.map(id => {
       const a = CRAFTING_DB.affixes.find(x => x.id === id);
-      return a ? { ...a, assigned: null } : null;
+      return a ? { ...a } : null;
     }).filter(Boolean);
 
-    // 2. Optimize prism assignments: minimize max affixes per prism
-    // Phase A: Lock affixes that have only one prism option
+    // ── Step 1: Assign prisms optimally ──────────────────────
+    // Separate single-prism (forced) from flexible affixes
+    const forced   = desired.filter(a => a.prisms.filter(p => p !== 'none').length === 1 || a.prisms[0] === 'none');
+    const flexible = desired.filter(a => a.prisms.filter(p => p !== 'none').length > 1);
+
     const prismCounts = {};
-    desired.forEach(a => {
-      const craftable = a.prisms.filter(p => p !== 'none');
-      if (craftable.length === 1) {
-        a.assigned = craftable[0];
-        prismCounts[a.assigned] = (prismCounts[a.assigned] || 0) + 1;
-      }
+    forced.forEach(a => {
+      const p = a.prisms.find(x => x !== 'none') || 'none';
+      a.assigned = p;
+      prismCounts[p] = (prismCounts[p] || 0) + 1;
     });
 
-    // Phase B: Assign flexible affixes to least-loaded valid prism
-    desired.forEach(a => {
-      if (a.assigned) return;
-      const craftable = a.prisms.filter(p => p !== 'none');
-      if (!craftable.length) { a.assigned = 'none'; return; }
-      // Sort options by current load, pick least-loaded
-      const best = craftable.reduce((bestP, p) => {
-        return (prismCounts[p] || 0) < (prismCounts[bestP] || 0) ? p : bestP;
-      }, craftable[0]);
+    // Assign flexible affixes to the least-loaded valid prism
+    flexible.forEach(a => {
+      const options = a.prisms.filter(p => p !== 'none');
+      const best = options.reduce((b, p) => (prismCounts[p] || 0) < (prismCounts[b] || 0) ? p : b, options[0]);
       a.assigned = best;
       prismCounts[best] = (prismCounts[best] || 0) + 1;
     });
 
-    // 3. Group by assigned prism
+    // ── Step 2: Group by assigned prism ──────────────────────
     const groups = {};
     desired.forEach(a => {
       if (!groups[a.assigned]) groups[a.assigned] = [];
       groups[a.assigned].push(a);
     });
 
-    // 4. Calculate enchanting locks needed
-    let locksNeeded = 0;
-    Object.values(groups).forEach(g => {
-      if (g.length > 1) locksNeeded += g.length - 1;
-    });
+    // ── Step 3: Determine overall difficulty ─────────────────
+    const maxConflict = Math.max(...Object.values(groups).filter(g => g[0].assigned !== 'none').map(g => g.length));
+    const hasConflict = maxConflict >= 2;
+    const noneGroup   = groups['none'] || [];
+    const hasUntargetable = noneGroup.length > 0;
 
-    // 5. Determine rolling order
-    // Priority: most conflicted (largest groups) FIRST within craftable prisms
-    // "none" prisms are noted but handled separately (no Cube targeting)
-    const sortedGroups = Object.entries(groups)
-      .filter(([prismId]) => prismId !== 'none')
-      .sort(([,a], [,b]) => b.length - a.length);  // descending size
+    let difficultyLabel, difficultyColor;
+    if (maxConflict === 1) {
+      difficultyLabel = '✅ Easy — no prism conflicts, 1 lock max needed';
+      difficultyColor = 'var(--green-bright)';
+    } else if (maxConflict === 2) {
+      difficultyLabel = '⚠️ Moderate — 2 stats share a prism, 1 lock needed';
+      difficultyColor = 'var(--gold)';
+    } else if (maxConflict === 3) {
+      difficultyLabel = '💀 Hard — 3 stats share a prism, 50/50 chance per roll hits your target';
+      difficultyColor = 'var(--orange-bright)';
+    } else {
+      difficultyLabel = '☠️ Extremely Difficult — 4 stats share a prism, mostly luck-based';
+      difficultyColor = 'var(--red-bright)';
+    }
 
-    const noneGroup = groups['none'] || [];
+    // ── Step 4: Build ordered steps ──────────────────────────
+    // Sort groups: no-conflict (size 1) last, largest conflicts first
+    // Exception: "none" group is always last
+    const craftableGroups = Object.entries(groups)
+      .filter(([p]) => p !== 'none')
+      .sort(([, a], [, b]) => b.length - a.length);
 
-    // 6. Generate steps
     const steps = [];
+    let lockUsed = false;
 
-    // Note any weapon inherents to set context
-    const inherentSlotDisplay = this.getInherentForSlot();
-    if (inherentSlotDisplay) {
-      steps.push({
-        type: 'info',
-        icon: '📌',
-        title: 'Inherent Affix',
-        body:  `Your weapon has a built-in <strong>${inherentSlotDisplay}</strong> inherent affix that doesn't need to be rolled. You only need to add the affixes above.`,
-      });
-    }
+    craftableGroups.forEach(([prismId, group]) => {
+      const prism    = CRAFTING_DB.prisms[prismId];
+      const poolSize = this.getPoolForPrism(prismId).length;
+      const count    = group.length;
 
-    sortedGroups.forEach(([prismId, group]) => {
-      const prism = CRAFTING_DB.prisms[prismId];
-      // Within each conflict group: inflexible affixes (single prism) first
-      const sortedGroup = [...group].sort((a, b) => a.prisms.length - b.prisms.length);
-
-      sortedGroup.forEach((a, idx) => {
-        const isFirstInGroup   = idx === 0;
-        const isLastInGroup    = idx === sortedGroup.length - 1;
-        const needsLockAfter   = !isLastInGroup;
-        const isLocked         = idx > 0; // a previous stat has been locked
-
-        // If this affix was flexibly assigned (has alternatives), note the alternatives
-        const alternativePrisms = a.prisms
-          .filter(p => p !== 'none' && p !== a.assigned)
-          .map(p => CRAFTING_DB.prisms[p].short);
-
+      if (count === 1) {
+        // No conflict — straightforward roll
+        const a = group[0];
         steps.push({
-          type:        'roll',
-          icon:        '🎲',
+          type:      'roll',
           prismId,
-          prismName:   prism.name,
-          prismColor:  prism.color,
-          prismBg:     prism.bg,
-          prismIcon:   prism.icon,
-          seeking:     a.name,
-          isConflict:  group.length > 1,
-          conflictIdx: idx,
-          conflictTotal: group.length,
-          lockBefore:  idx > 0 ? sortedGroup.slice(0, idx).map(x => x.name) : [],
-          needsLockAfter,
-          flexible:    a.prisms.length > 1 && alternativePrisms.length > 0,
-          altPrisms:   alternativePrisms,
-          // Pool hint: all affixes available from this prism + slot + class
-          pool: this.getAfixPoolForPrism(prismId).map(x => x.name),
-          note: a.note || null,
+          prism,
+          seeking:   [a.name],
+          difficulty: 'easy',
+          poolSize,
+          conflict:  1,
+          note:      a.note || null,
+          flexible:  a.prisms.length > 1,
+          altPrisms: a.prisms.filter(p => p !== 'none' && p !== a.assigned).map(p => CRAFTING_DB.prisms[p].short),
+          pool:      this.getPoolForPrism(prismId).map(x => x.name),
         });
-
-        if (needsLockAfter) {
-          steps.push({
-            type:     'lock',
-            icon:     '🔒',
-            statName: a.name,
-            nextStat: sortedGroup[idx + 1]?.name,
-          });
-        }
-      });
+      } else if (count === 2) {
+        // 2-conflict: roll first, lock it, roll second
+        // This uses the ONLY lock we have
+        steps.push({
+          type:       'roll',
+          prismId,
+          prism,
+          seeking:    [group[0].name, group[1].name],
+          seekingHint:'Roll until you get either one.',
+          difficulty: 'easy',
+          poolSize,
+          conflict:   2,
+          note:       null,
+          pool:       this.getPoolForPrism(prismId).map(x => x.name),
+        });
+        steps.push({
+          type:     'lock',
+          lockWhat: 'Whichever stat you just got (either one)',
+          lockWhy:  `You now have 1 of 2 needed ${prism.name} stats. Lock it so the next ${prism.name} Focus Reroll cannot accidentally change it.`,
+          isOnly:   !lockUsed,
+        });
+        lockUsed = true;
+        steps.push({
+          type:       'roll',
+          prismId,
+          prism,
+          seeking:    [group[0].name + ' or ' + group[1].name],
+          seekingHint:'Roll until you get the other one. The locked stat is protected.',
+          difficulty: 'moderate',
+          poolSize,
+          conflict:   2,
+          isSecond:   true,
+          note:       null,
+          pool:       this.getPoolForPrism(prismId).map(x => x.name),
+        });
+      } else if (count === 3) {
+        // 3-conflict: most efficient path explained honestly
+        steps.push({
+          type:       'roll',
+          prismId,
+          prism,
+          seeking:    group.map(a => a.name),
+          seekingHint:'Roll until you land any TWO of these three at once (extremely lucky) OR proceed one at a time.',
+          difficulty: 'hard',
+          poolSize,
+          conflict:   3,
+          note:       null,
+          pool:       this.getPoolForPrism(prismId).map(x => x.name),
+        });
+        steps.push({
+          type:    'conflict-warning',
+          count:   3,
+          prism,
+          targets: group.map(a => a.name),
+        });
+      } else {
+        // 4-conflict: luck-based, be honest
+        steps.push({
+          type:       'roll',
+          prismId,
+          prism,
+          seeking:    group.map(a => a.name),
+          seekingHint:'All four affixes come from the same prism. Only 1 can be locked at any time.',
+          difficulty: 'extreme',
+          poolSize,
+          conflict:   4,
+          note:       null,
+          pool:       this.getPoolForPrism(prismId).map(x => x.name),
+        });
+        steps.push({
+          type:    'conflict-warning',
+          count:   4,
+          prism,
+          targets: group.map(a => a.name),
+        });
+      }
     });
 
-    // Handle untargetable affixes
+    // Untargetable stats
     if (noneGroup.length) {
-      steps.push({
-        type:   'random',
-        icon:   '🎰',
-        affixes: noneGroup.map(a => a.name),
-      });
+      steps.push({ type: 'untargetable', affixes: noneGroup.map(a => a.name) });
     }
 
-    // Completion step
-    steps.push({
-      type:  'done',
-      icon:  '✅',
-      picks: desired.map(a => a.name),
-    });
+    // Inherent affix note
+    const inherent = this.getInherentForSlot();
+    if (inherent) {
+      steps.unshift({ type: 'inherent', inherent });
+    }
 
-    return {
-      desired,
-      groups,
-      sortedGroups,
-      locksNeeded,
-      steps,
-      hasConflict:    Object.values(groups).some(g => g.length > 1),
-      hasUntargetable: noneGroup.length > 0,
-      hasFlexible:    desired.some(a => a.prisms.length > 1),
-    };
+    // Completion
+    steps.push({ type: 'done', picks: desired.map(a => a.name) });
+
+    return { desired, groups, maxConflict, difficultyLabel, difficultyColor, steps, hasConflict, hasUntargetable, noneGroup };
   },
 
-  getAfixPoolForPrism(prismId) {
+  getPoolForPrism(prismId) {
     if (!this.slot) return [];
     return CRAFTING_DB.affixes.filter(a => {
       if (!a.prisms.includes(prismId)) return false;
@@ -322,14 +397,8 @@ const CraftSim = {
   },
 
   getInherentForSlot() {
-    // Find slotDisplay for the current slot
-    const slotDef = getGearSlots().find(s => s.id === this.slot);
-    if (!slotDef) return null;
-    // Check saved gear for this slot to get slotDisplay
-    const savedItem = STATE.gear[this.slot];
-    if (savedItem && savedItem.slotDisplay) {
-      return CRAFTING_DB.weaponInherents[savedItem.slotDisplay] || null;
-    }
+    const saved = STATE.gear[this.slot];
+    if (saved && saved.slotDisplay) return CRAFTING_DB.weaponInherents[saved.slotDisplay] || null;
     return null;
   },
 
@@ -342,50 +411,48 @@ const CraftSim = {
       container.innerHTML = `<div class="cs-plan-empty">
         <div style="font-size:40px;margin-bottom:12px;">🟫</div>
         <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--text-muted);margin-bottom:8px;">Select up to 4 affixes above</div>
-        <div style="font-size:12px;color:var(--text-dim);max-width:280px;line-height:1.6;">
-          Your step-by-step Horadric Cube crafting plan will appear here, including when to use the Enchanter to lock stats.
+        <div style="font-size:12px;color:var(--text-dim);max-width:300px;line-height:1.6;text-align:center;">
+          Your step-by-step Horadric Cube crafting plan will appear here, including the optimal rolling order
+          and exactly when (and if) to use the Enchanter's single stat lock.
         </div>
       </div>`;
       return;
     }
 
     this.plan = this.generatePlan();
-    if (!this.plan) { container.innerHTML = ''; return; }
+    if (!this.plan) return;
     const plan = this.plan;
 
     let html = '';
 
-    // ── Summary banner ──
-    const conflictColor = plan.hasConflict ? 'var(--orange-bright)' : 'var(--green-bright)';
+    // ── Difficulty banner ─────────────────────────────────────
     html += `<div class="cs-plan-summary">
-      <div class="cs-plan-summary-row">
-        <span class="cs-plan-label">Enchanting Locks Needed:</span>
-        <span style="color:${conflictColor};font-weight:700;">${plan.locksNeeded === 0 ? '✅ None — no conflicts!' : `🔒 ${plan.locksNeeded} lock${plan.locksNeeded > 1 ? 's' : ''}`}</span>
+      <div style="font-size:13px;font-weight:700;color:${plan.difficultyColor};margin-bottom:8px;">
+        ${plan.difficultyLabel}
       </div>
-      ${plan.hasConflict ? `<div class="cs-plan-summary-row">
-        <span class="cs-plan-label">Conflict Strategy:</span>
-        <span style="color:var(--text-muted);font-size:11px;">Roll conflicting affixes first. Lock each with the Enchanter before rolling the next from the same prism.</span>
-      </div>` : ''}
-      ${plan.hasFlexible ? `<div class="cs-plan-summary-row">
-        <span class="cs-plan-label">★ Flexible Affixes:</span>
-        <span style="color:var(--gold);font-size:11px;">One or more affixes have multiple prism options. We've assigned them to minimize conflicts.</span>
-      </div>` : ''}
-      ${plan.hasUntargetable ? `<div class="cs-plan-summary-row">
-        <span class="cs-plan-label">❌ Untargetable Affixes:</span>
-        <span style="color:var(--red-bright);font-size:11px;">One or more affixes cannot be targeted by any prism — they roll randomly. Plan accordingly.</span>
+      <div class="cs-key-rule">
+        🔒 <strong>Lock rule:</strong> You can only lock <strong>ONE affix per item at any time</strong> (at the Enchanter/Occultist).
+        When you Focus Reroll with a Tuning Prism, the Cube <strong>randomly picks which affix of that category gets changed</strong>.
+        The lock protects one specific affix from being altered.
+      </div>
+      ${plan.hasUntargetable ? `<div class="cs-key-rule" style="border-left-color:var(--red-bright);color:var(--red-bright);">
+        ❌ <strong>Heads up:</strong> One or more of your desired affixes cannot be targeted by any Tuning Prism.
+        They roll randomly — plan around these with Chaotic Reroll as a last resort.
       </div>` : ''}
     </div>`;
 
-    // ── Steps ──
+    // ── Steps ─────────────────────────────────────────────────
     html += `<div class="cs-steps">`;
     let stepNum = 0;
+
     plan.steps.forEach(step => {
-      if (step.type === 'info') {
+
+      if (step.type === 'inherent') {
         html += `<div class="cs-step cs-step-info">
           <div class="cs-step-num">📌</div>
           <div class="cs-step-body">
-            <div class="cs-step-title">${step.title}</div>
-            <div class="cs-step-desc">${step.body}</div>
+            <div class="cs-step-title">Weapon Inherent Affix</div>
+            <div class="cs-step-desc">Your <strong>${step.inherent.join(', ')}</strong> is built into this weapon type — it doesn't count as a rollable affix slot.</div>
           </div>
         </div>`;
         return;
@@ -393,35 +460,46 @@ const CraftSim = {
 
       if (step.type === 'roll') {
         stepNum++;
-        const prism    = CRAFTING_DB.prisms[step.prismId];
+        const diffColor = {
+          easy:     'var(--green-bright)',
+          moderate: 'var(--gold)',
+          hard:     'var(--orange-bright)',
+          extreme:  'var(--red-bright)',
+        }[step.difficulty] || 'var(--text-muted)';
+
+        const diffLabel = {
+          easy:     '✅ Straightforward',
+          moderate: '⚠️ Lock required',
+          hard:     '💀 Difficult',
+          extreme:  '☠️ Luck-based',
+        }[step.difficulty] || '';
+
         const poolHtml = step.pool.length
-          ? `<div class="cs-pool-hint">
-              <span class="cs-pool-label">Full prism pool for this slot:</span>
-              <span class="cs-pool-list">${step.pool.map(n => `<span class="cs-pool-item ${step.seeking === n ? 'cs-pool-target' : ''}">${n}</span>`).join('')}</span>
-            </div>`
-          : '';
-        const lockWarning = step.lockBefore.length
-          ? `<div class="cs-lock-warning">⚠️ Lock ${step.lockBefore.join(' and ')} at the Enchanter before this step!</div>`
-          : '';
-        const flexNote = step.flexible
-          ? `<div class="cs-flex-note">★ Flexible: <strong>${step.seeking}</strong> could also come from <strong>${step.altPrisms.join(' or ')}</strong> — assigned here to minimize conflicts.</div>`
-          : '';
-        const conflictNote = step.isConflict
-          ? `<div class="cs-conflict-note">Roll ${step.conflictIdx + 1} of ${step.conflictTotal} from this prism</div>`
+          ? `<details class="cs-pool-details">
+              <summary class="cs-pool-summary">Full ${step.prism.short} pool for this slot (${step.poolSize} affixes)</summary>
+              <div class="cs-pool-list">
+                ${step.pool.map(n => `<span class="cs-pool-item ${step.seeking.some(s => n.includes(s) || s.includes(n)) ? 'cs-pool-target' : ''}">${n}</span>`).join('')}
+              </div>
+            </details>`
           : '';
 
-        html += `<div class="cs-step cs-step-roll" style="border-left-color:${step.prismColor};">
-          <div class="cs-step-num">${stepNum}</div>
+        const flexNote = step.flexible
+          ? `<div class="cs-flex-note">★ Flexible — this stat could also come from <strong>${step.altPrisms.join(' or ')}</strong>. Assigned here to minimize conflicts.</div>`
+          : '';
+
+        html += `<div class="cs-step cs-step-roll" style="border-left-color:${step.prism.color};">
+          <div class="cs-step-num" style="background:${step.prism.bg};border-color:${step.prism.border};color:${step.prism.color};">${stepNum}</div>
           <div class="cs-step-body">
-            ${lockWarning}
             <div class="cs-step-header">
-              <span class="cs-step-prism-badge" style="background:${prism.bg};border-color:${prism.border};color:${prism.color};">
-                ${prism.icon} ${prism.name}
+              <span class="cs-step-prism-badge" style="background:${step.prism.bg};border-color:${step.prism.border};color:${step.prism.color};">
+                ${step.prism.icon} ${step.prism.name}
               </span>
-              ${conflictNote}
+              <span style="font-size:10px;color:${diffColor};font-weight:600;">${diffLabel}</span>
+              ${step.conflict > 1 ? `<span style="font-size:10px;color:var(--text-dim);">(${step.conflict} stats from this prism)</span>` : ''}
             </div>
-            <div class="cs-step-title">Seeking: <strong>${step.seeking}</strong></div>
-            ${step.note ? `<div class="cs-step-desc" style="color:var(--gold);">💡 ${step.note}</div>` : ''}
+            <div class="cs-step-title">Seeking: <strong>${step.seeking.join(' / ')}</strong></div>
+            ${step.seekingHint ? `<div class="cs-step-hint">${step.seekingHint}</div>` : ''}
+            ${step.note ? `<div class="cs-step-desc" style="color:var(--gold);margin-top:4px;">💡 ${step.note}</div>` : ''}
             ${flexNote}
             ${poolHtml}
           </div>
@@ -434,30 +512,78 @@ const CraftSim = {
         html += `<div class="cs-step cs-step-lock">
           <div class="cs-step-num">${stepNum}</div>
           <div class="cs-step-body">
-            <div class="cs-step-title">🔒 Enchant-Lock <strong>"${step.statName}"</strong></div>
+            <div class="cs-step-title">🔒 Lock: <strong>${step.lockWhat}</strong></div>
             <div class="cs-step-desc">
-              Visit the <strong>Occultist</strong> → open the <strong>Enchanting</strong> tab →
-              find <strong>${step.statName}</strong> → click the <strong>lock icon</strong>.
-              This prevents the Cube from touching this stat when you roll for
-              <strong>${step.nextStat || 'the next affix'}</strong>.
+              ${step.lockWhy}<br><br>
+              <strong>How:</strong> Visit the <strong>Occultist</strong> → <strong>Enchant Item</strong> tab → click the
+              🔒 lock icon next to the stat you just rolled.
+              <br><br>
+              <span style="color:var(--red-bright);font-weight:600;">⚠️ This is your ONE and only lock.</span>
+              You cannot lock any other stat while this lock is active. Unlock it when you no longer need protection.
             </div>
           </div>
         </div>`;
         return;
       }
 
-      if (step.type === 'random') {
+      if (step.type === 'conflict-warning') {
+        const { count, prism, targets } = step;
+        const chancePerRoll = Math.round(100 / count);
+        if (count === 3) {
+          html += `<div class="cs-step cs-step-conflict">
+            <div class="cs-step-num">⚠️</div>
+            <div class="cs-step-body">
+              <div class="cs-step-title">3-Prism Conflict Strategy</div>
+              <div class="cs-step-desc">
+                You need <strong>3 stats from ${prism.name}</strong>:
+                <strong>${targets.join(', ')}</strong><br><br>
+                You only have <strong>1 lock</strong>. Here's the realistic approach:
+                <ol style="margin:10px 0;padding-left:18px;line-height:2.2;">
+                  <li>Roll ${prism.short} → fish until you get <strong>any</strong> of the 3 targets → <strong>Lock it</strong></li>
+                  <li>Roll ${prism.short} again → ~${chancePerRoll}% chance each roll hits a remaining target (vs. the locked one which is safe)</li>
+                  <li>Once you have 2 of the 3 locked/rolled: <strong>you must choose</strong> — lock one, accept the other is now exposed</li>
+                  <li>Roll ${prism.short} for the 3rd target — the exposed stat <em>could</em> get overwritten (the Cube picks randomly among unlocked ${prism.short} stats)</li>
+                </ol>
+                <span style="color:var(--orange-bright);">⚠️ This will likely take many attempts. Consider whether the build truly needs all 3 Aggressive stats, or if one could be sourced differently.</span>
+              </div>
+            </div>
+          </div>`;
+        } else {
+          html += `<div class="cs-step cs-step-conflict" style="border-left-color:var(--red-bright);">
+            <div class="cs-step-num">☠️</div>
+            <div class="cs-step-body">
+              <div class="cs-step-title">4-Prism Conflict — Largely Luck-Based</div>
+              <div class="cs-step-desc">
+                All 4 desired stats come from <strong>${prism.name}</strong>:
+                <strong>${targets.join(', ')}</strong><br><br>
+                With only 1 lock, at best you can protect 1 stat while the other 3 slots are exposed.
+                Each Focus Reroll randomly picks from the 3 unlocked ${prism.short} slots.<br><br>
+                <strong>The honest truth:</strong> Getting all 4 requires a combination of locking strategically and accepting that
+                at some point you'll need 3 unlocked slots to all have landed on your targets simultaneously.
+                <br><br>
+                💡 <strong>Practical tip:</strong> Roll all 4 slots without any specific prism, lock the best 1, then use
+                Focus Reroll with ${prism.short} repeatedly. Treat the item as done when you get close enough,
+                and rely on Masterworking to amplify the stats you got right.
+              </div>
+            </div>
+          </div>`;
+        }
+        return;
+      }
+
+      if (step.type === 'untargetable') {
         stepNum++;
         html += `<div class="cs-step cs-step-random">
           <div class="cs-step-num">${stepNum}</div>
           <div class="cs-step-body">
-            <div class="cs-step-title">🎰 Random Roll — No Prism Available</div>
+            <div class="cs-step-title">🎰 Untargetable — No Prism Available</div>
             <div class="cs-step-desc">
               <strong style="color:var(--red-bright);">${step.affixes.join(', ')}</strong>
-              cannot be targeted by any Tuning Prism. Roll without a prism and hope for the best.
+              cannot be targeted by any Tuning Prism.
               <br><br>
-              💡 <strong>Tip:</strong> Roll all your targeted affixes first, then lock them all, and use
-              Chaotic Reroll on the remaining slot(s) to fish for this stat.
+              💡 <strong>Best approach:</strong> Roll all your targeted affixes first (lock 1 as needed),
+              then lock ALL the ones you want, leaving only this slot open. Use <strong>Chaotic Reroll</strong>
+              (no prism) to randomly cycle through all affix types until you land on this stat.
             </div>
           </div>
         </div>`;
@@ -470,12 +596,13 @@ const CraftSim = {
           <div class="cs-step-body">
             <div class="cs-step-title">All affixes acquired!</div>
             <div class="cs-step-desc">
-              <strong>${step.picks.join(', ')}</strong><br><br>
-              Next steps:
-              <ol style="margin-top:8px;padding-left:18px;font-size:11px;line-height:2.0;">
-                <li>🔓 Unlock all Enchanting locks at the Occultist</li>
+              <strong>${step.picks.join(', ')}</strong>
+              <br><br>
+              <strong>Continue building this item:</strong>
+              <ol style="margin-top:8px;padding-left:18px;font-size:11px;line-height:2.2;">
+                <li>🔓 Remove any Enchanting locks at the Occultist</li>
                 <li>📖 Imprint your Legendary Aspect at the Occultist</li>
-                <li>🔨 Apply both Tempers at the Blacksmith</li>
+                <li>🔨 Apply both Temper slots at the Blacksmith (limited re-rolls!)</li>
                 <li>⭐ Masterwork to Rank 12 at the Blacksmith</li>
               </ol>
             </div>
@@ -490,32 +617,39 @@ const CraftSim = {
   },
 
   // ── PRE-FILL FROM GEAR PLANNER ─────────────────────────────
-  // Called when a user clicks "Plan This Craft" from a gear slot
   prefillFromSlot(slotId) {
     this.slot = slotId;
     this.cls  = STATE.buildClass || null;
+
     const item = STATE.gear[slotId];
     if (item && item.affixes && item.affixes.length) {
-      // Try to match affix names to DB IDs
       const matchedIds = [];
       item.affixes.forEach(name => {
+        const lower = name.toLowerCase().trim();
         const match = CRAFTING_DB.affixes.find(a =>
-          a.name.toLowerCase() === name.toLowerCase() ||
-          a.name.toLowerCase().includes(name.toLowerCase())
+          a.name.toLowerCase() === lower ||
+          a.name.toLowerCase().includes(lower) ||
+          lower.includes(a.name.toLowerCase().split(' ')[0])
         );
-        if (match && matchedIds.length < 4) matchedIds.push(match.id);
+        if (match && matchedIds.length < 4 && !matchedIds.includes(match.id)) {
+          matchedIds.push(match.id);
+        }
       });
       this.picks = matchedIds;
     } else {
       this.picks = [];
     }
+
     // Switch to crafting tab
-    document.getElementById('tab-crafting')?.click();
-    // Update selectors
+    const tab = document.getElementById('tab-crafting');
+    if (tab) tab.click();
+    else switchTab('crafting');
+
     const slotSel = document.getElementById('cs-slot');
     if (slotSel) slotSel.value = slotId;
     const clsSel  = document.getElementById('cs-class');
     if (clsSel && this.cls) clsSel.value = this.cls;
+
     this.renderAfixPicker();
     this.renderSelected();
     this.renderPlan();
